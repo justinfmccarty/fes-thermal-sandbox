@@ -1,0 +1,254 @@
+# =============================================================================
+# JODLA PROJECT CONFIGURATION - SINGLE SOURCE OF TRUTH
+# =============================================================================
+#
+# ALL parameters must be defined here. No hardcoded defaults in code.
+# The config_locator.py provides access via: config = get_config()
+#
+# ARCHITECTURE:
+# - paths: File and directory paths
+# - analysis: Analysis period settings
+# - physical_constants: Immutable physical constants
+# - model: All model parameters (CEB, species, risk, soil)
+# - simulation: Radiance simulation settings
+# - outputs: Output file settings
+#
+# =============================================================================
+
+# =============================================================================
+# PATHS
+# =============================================================================
+# All paths can be relative (resolved against config.yaml directory) or absolute.
+# Relative paths enable cross-platform compatibility between macOS and Windows.
+paths:
+  # Project root (resolved to config.yaml directory)
+  project_root: "."
+  
+  # Radiance projects
+  baseline_project_dir: "python/baseline_radiance_project"
+  scenario_project_dir: "python/scenario_radiance_project"
+  
+  # Input data files
+  weather_file: "weather.epw"
+  tree_points_file: "grid_records/baseline_trees.csv"
+  sensor_points_file: "grid_records/jodla_baseline_grid.csv"
+  
+  # Database files
+  species_database_file: "tree_species_database.csv"
+  material_database_file: "root_material_database.csv"
+  grid_material_mapping_file: "grid_records/baseline_materials.csv"
+  scenario_grid_materials_file: "grid_records/scenario_grid_materials.csv"
+  
+  # Output directories
+  raytracing_results_dir: "raytracing_results"
+  analysis_results_dir: "analysis_outputs"
+  biophysical_outputs_dir: "outputs"
+
+# =============================================================================
+# ANALYSIS PERIOD
+# =============================================================================
+analysis:
+  # Period type for analysis
+  # Options: 'annual', 'warmest_week', 'manual'
+  period_type: 'warmest_week'
+  
+  # For 'manual' period, specify start and end dates [month, day]
+  # These are ignored unless period_type is 'manual'
+  start_date: [7, 15]
+  end_date: [7, 21]
+  
+  # Hour range within period (null = use all hours in period)
+  # Format: [start_hour, end_hour] relative to period start
+  hour_range: null
+
+# =============================================================================
+# PHYSICAL CONSTANTS (immutable)
+# =============================================================================
+physical_constants:
+  sigma: 5.67e-8           # Stefan-Boltzmann constant [W/m2/K4]
+  rho_air: 1.2             # Air density [kg/m3]
+  cp_air: 1005.0           # Specific heat of air [J/kg/K]
+  lambda_v: 2450000.0      # Latent heat of vaporization [J/kg]
+  r_gas: 287.0             # Gas constant for dry air [J/kg/K]
+
+# =============================================================================
+# MODEL PARAMETERS
+# =============================================================================
+model:
+  # -------------------------------------------------------------------------
+  # Li2023 CEB Model Parameters
+  # -------------------------------------------------------------------------
+  ceb:
+    # Model selection
+    enabled: true                  # Use CEB model (vs legacy leaf energy balance)
+    
+    # Boundary layer resistance (Eq. 2)
+    A_coeff: 87.0                  # E coefficient [s^0.5/m]
+    
+    # Temperature offset proxies (for Tg and Tw estimation)
+    delta_Tg: 10.0                 # Ground temp offset from Ta [C]
+    delta_Tw: 10.0                 # Wall temp offset from Ta [C]
+    
+    # Shortwave coupling factors (grid-to-leaf conversion)
+    beta_dir: 0.8                  # Direct SW coupling factor
+    beta_dif: 0.6                  # Diffuse SW coupling factor
+    
+    # Material properties
+    epsilon_w: 0.90                # Wall emissivity
+    epsilon_g_default: 0.95        # Default ground emissivity
+    albedo_g_default: 0.30         # Default ground albedo
+    
+    # Solver parameters
+    T_min_offset: -15.0            # Min Tf offset from Ta for bounds [C]
+    T_max_offset: 40.0             # Max Tf offset from Ta for bounds [C]
+    solver_xtol: 0.1               # Solver tolerance [C]
+    solver_maxiter: 50             # Max solver iterations
+  
+  # -------------------------------------------------------------------------
+  # Species Default Parameters (fallback when not in CSV)
+  # -------------------------------------------------------------------------
+  species_defaults:
+    # Leaf optical properties
+    alpha_leaf: 0.18               # Leaf shortwave albedo
+    epsilon_leaf: 0.97             # Leaf emissivity
+    
+    # Stomatal conductance (legacy model)
+    gc_max: 0.3                    # Maximum stomatal conductance [mol/m2/s]
+    vpd_sensitivity: 3.0           # VPD response parameter [kPa]
+    
+    # Temperature response
+    T_opt: 25.0                    # Optimal temperature [C]
+    T_crit: 42.0                   # Critical temperature [C]
+    
+    # Radiation absorption
+    beta_above: 0.8                # SW absorption factor from above
+    beta_below: 0.2                # SW absorption factor from below
+    
+    # Canopy properties
+    # Note: SVF is tree-specific and comes from tree_points CSV
+    # This is only used as last-resort fallback if tree data lacks SVF column
+    SVF: 0.6                       # Sky view factor (fallback only)
+    light_extinction_coefficient: 0.5
+    
+    # Li2023 CEB specific
+    r_sto: 160.0                   # Stomatal resistance [s/m]
+    leaf_char_size: 0.05           # Characteristic leaf dimension [m]
+    
+    # Aerodynamic properties (legacy model)
+    ra_scale: 1.0                  # Aerodynamic resistance scaling
+    shelter_factor: 1.0            # Shelter factor for wind reduction
+  
+  # -------------------------------------------------------------------------
+  # Risk Assessment (Leaf Temperature Only)
+  # -------------------------------------------------------------------------
+  risk:
+    T_crit: 30.0                   # Critical leaf temperature for stress [C]
+  
+  # -------------------------------------------------------------------------
+  # Ground Temperature Model Parameters
+  # -------------------------------------------------------------------------
+  ground:
+    # Ground type thermal properties
+    # Three basic types: impervious, pervious, vegetated
+    types:
+      impervious:
+        heat_capacity: 2000000.0   # Effective heat capacity [J/m2/K] (high thermal mass)
+        evap_factor: 0.0           # Evaporation factor (0 = no evaporation)
+        k_drain: 0.0               # Drainage rate [1/day] (N/A for impervious)
+      pervious:
+        heat_capacity: 1500000.0   # Effective heat capacity [J/m2/K]
+        evap_factor: 0.3           # Evaporation factor
+        k_drain: 0.5               # Fast drainage [1/day]
+      vegetated:
+        heat_capacity: 1000000.0   # Effective heat capacity [J/m2/K] (lower thermal mass)
+        evap_factor: 0.8           # High evaporation (evapotranspiration)
+        k_drain: 0.2               # Moderate drainage [1/day]
+    
+    # Aerodynamic resistance for ground surface [s/m]
+    r_a_ground: 50.0
+    
+    # Reference potential evaporation rate [mm/day] (for LE_g calculation)
+    ET_pot_ref: 5.0
+  
+  # -------------------------------------------------------------------------
+  # Soil Moisture Parameters (Enhanced)
+  # -------------------------------------------------------------------------
+  soil:
+    # Soil water holding properties
+    theta_fc: 0.35                 # Field capacity [m3/m3]
+    theta_wilt: 0.15               # Wilting point [m3/m3]
+    theta_sat: 0.45                # Saturated water content [m3/m3]
+    theta_init: 0.30               # Initial soil moisture [m3/m3]
+    
+    # Root zone
+    Z_r: 0.5                       # Root zone depth [m]
+    
+    # Drainage (default, can be overridden by ground type)
+    k_drain_default: 0.2           # Default drainage coefficient [1/day]
+    
+    # Stomatal stress parameters
+    REW_crit: 0.4                  # Relative extractable water threshold for stress
+    r_sto_min: 160.0               # Minimum stomatal resistance [s/m] (well-watered)
+
+# =============================================================================
+# SIMULATION SETTINGS (Radiance raytracing)
+# =============================================================================
+simulation:
+  # Radiance parameters
+  n_workers: 10                     # Parallel workers for raytracing
+  sky_resolution: 1                # Sky discretization resolution
+  surface_key: ""                  # Surface key (empty if model/ in project_dir)
+  use_accelerad: true             # Use Accelerad (GPU) for faster raytracing (requires Accelerad installation)
+  
+  # Simulation period for baseline
+  baseline_period: 'annual'        # Options: 'annual', 'warmest_week', 'manual'
+  
+  # Simulation period for scenarios
+  scenario_period: 'warmest_week'  # Options: 'annual', 'warmest_week', 'manual'
+  scenario_period_start: null      # For 'manual': [month, day]
+  scenario_period_end: null        # For 'manual': [month, day]
+  
+  # Random seed for reproducibility
+  random_seed: 42
+  
+  # Scenario instructions [landscape_naturalness, facade_naturalness]
+  # Values: 0.0 (concrete) to 1.0 (vegetation)
+  # Set to null for random generation
+  instructions:
+    - [0.0, 0.0]      # scenario_000: all concrete
+    - [0.25, 0.0]     # scenario_001
+    - [0.5, 0.0]      # scenario_002
+    - [0.75, 0.0]     # scenario_003
+    - [1.0, 0.0]      # scenario_004
+    - [0.0, 0.25]     # scenario_005
+    - [0.25, 0.25]    # scenario_006
+    - [0.5, 0.25]     # scenario_007
+    - [0.75, 0.25]    # scenario_008
+    - [1.0, 0.25]     # scenario_009
+    - [0.0, 0.5]      # scenario_010
+    - [0.25, 0.5]     # scenario_011
+    - [0.5, 0.5]      # scenario_012: 50/50 mix
+    - [0.75, 0.5]     # scenario_013
+    - [1.0, 0.5]      # scenario_014
+    - [0.0, 0.75]     # scenario_015
+    - [0.25, 0.75]    # scenario_016
+    - [0.5, 0.75]     # scenario_017
+    - [0.75, 0.75]    # scenario_018
+    - [1.0, 0.75]     # scenario_019
+    - [0.0, 1.0]      # scenario_020
+    - [0.25, 1.0]     # scenario_021
+    - [0.5, 1.0]      # scenario_022
+    - [0.75, 1.0]     # scenario_023
+    - [1.0, 1.0]      # scenario_024: full greening
+  
+  # Number of random scenarios (used if instructions is null)
+  n_scenarios: 25
+
+# =============================================================================
+# OUTPUT SETTINGS
+# =============================================================================
+outputs:
+  save_scenario_results: true      # Save per-scenario biophysical results
+  save_risk_analyses: true         # Save risk analysis outputs
+  save_summary: true               # Save summary tables
+  save_plots: true                 # Generate and save plots

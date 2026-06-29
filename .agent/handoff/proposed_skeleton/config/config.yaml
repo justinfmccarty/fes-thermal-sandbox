@@ -1,0 +1,14 @@
+# Run config — overrides defaults.yaml. Paths are relative to this file (portable).
+# PORT STRUCTURE FROM: src_archive/config.yaml (paths block).
+paths:
+  weather_file: data/weather.epw
+  species_database_file: data/tree_species_database.csv
+  material_database_file: data/root_material_database.csv
+  grid_records_dir: data/grid_records
+  raytracing_results_dir: outputs/raytracing_results
+  biophysical_outputs_dir: outputs/biophysical
+  analysis_results_dir: outputs/analysis
+model:
+  canopy_engine: li2023_ceb
+analysis:
+  period_type: warmest_week

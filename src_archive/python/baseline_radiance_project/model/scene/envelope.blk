@@ -1,0 +1,59 @@
+void plastic jar_building_stairs
+0
+0
+5 0.0 0.0 0.0 0.0 0.0
+
+void plastic grey_asphalt
+0
+0
+5 0.0 0.0 0.0 0.0 0.0
+
+void plastic grey_limestone
+0
+0
+5 0.0 0.0 0.0 0.0 0.0
+
+void glass deciduous
+0
+0
+4 0.250884124054 0.152722984936 0.958415432861 1.15
+
+void glass glass
+0
+0
+4 0.760232011369 0.760232011369 0.760232011369 1.52
+
+void plastic short_grass
+0
+0
+5 0.0 0.0 0.0 0.0 0.0
+
+void plastic black_brick
+0
+0
+5 0.0 0.0 0.0 0.0 0.0
+
+void plastic grey_concrete
+0
+0
+5 0.0 0.0 0.0 0.0 0.0
+
+void plastic tall_grass
+0
+0
+5 0.0 0.0 0.0 0.0 0.0
+
+void plastic tan_small_stone_aggregate
+0
+0
+5 0.0 0.0 0.0 0.0 0.0
+
+void glass conifer
+0
+0
+4 0.250884124054 0.152722984936 0.958415432861 1.15
+
+void plastic grey_precast_concrete
+0
+0
+5 0.0 0.0 0.0 0.0 0.0

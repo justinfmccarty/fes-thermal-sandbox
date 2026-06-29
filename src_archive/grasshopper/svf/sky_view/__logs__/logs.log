@@ -1,0 +1,368 @@
+2026-01-09 14:17:53 DEBUG: Checking if LetSkyViewFly(_input_params={"cloudy_sky": "uniform", "cpu_count": 7, "grid_filter": "*", "min_sensor_count": 200, "model": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/DLA_Study.hbjson", "radiance_parameters": "-aa 0.1 -ad 2048 -ar 64", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"}) is complete
+2026-01-09 14:17:53 DEBUG: Checking if _Main_f01f4ea6Orchestrator(_input_params={"cloudy_sky": "uniform", "cpu_count": 7, "grid_filter": "*", "min_sensor_count": 200, "model": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/DLA_Study.hbjson", "radiance_parameters": "-aa 0.1 -ad 2048 -ar 64", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"}) is complete
+2026-01-09 14:17:53 INFO: Informed scheduler that task   LetSkyViewFly___cloudy_sky_____ab6fefd279   has status   PENDING
+2026-01-09 14:17:53 DEBUG: Checking if PostprocessSkyView(_input_params={"cloudy_sky": "uniform", "cpu_count": 7, "grid_filter": "*", "min_sensor_count": 200, "model": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/DLA_Study.hbjson", "params_folder": "__params", "radiance_parameters": "-aa 0.1 -ad 2048 -ar 64", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"}) is complete
+2026-01-09 14:17:53 INFO: Informed scheduler that task   _Main_f01f4ea6Orchestrator___cloudy_sky_____ab6fefd279   has status   PENDING
+2026-01-09 14:17:53 DEBUG: Checking if PrepareFolderSkyView(_input_params={"cloudy_sky": "uniform", "cpu_count": 7, "grid_filter": "*", "min_sensor_count": 200, "model": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/DLA_Study.hbjson", "params_folder": "__params", "radiance_parameters": "-aa 0.1 -ad 2048 -ar 64", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"}, radiance_parameters=-aa 0.1 -ad 2048 -ar 64) is complete
+2026-01-09 14:17:53 DEBUG: Checking if SkyViewRayTracing(_input_params={"cloudy_sky": "uniform", "cpu_count": 7, "grid_filter": "*", "min_sensor_count": 200, "model": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/DLA_Study.hbjson", "params_folder": "__params", "radiance_parameters": "-aa 0.1 -ad 2048 -ar 64", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"}) is complete
+2026-01-09 14:17:53 INFO: Informed scheduler that task   PostprocessSkyView___cloudy_sky_____05247562de   has status   PENDING
+2026-01-09 14:17:53 INFO: Informed scheduler that task   SkyViewRayTracing___cloudy_sky_____05247562de   has status   PENDING
+2026-01-09 14:17:53 INFO: Informed scheduler that task   PrepareFolderSkyView___cloudy_sky______aa_0_1__ad_2048_ed0afb84be   has status   PENDING
+2026-01-09 14:17:53 INFO: Done scheduling tasks
+2026-01-09 14:17:53 INFO: Running Worker with 7 processes
+2026-01-09 14:17:53 DEBUG: Asking scheduler for work...
+2026-01-09 14:17:53 DEBUG: Pending tasks: 5
+2026-01-09 14:17:53 DEBUG: Asking scheduler for work...
+2026-01-09 14:17:53 DEBUG: Done
+2026-01-09 14:17:53 DEBUG: There are no more tasks to run at this time
+2026-01-09 14:17:53 DEBUG: PrepareFolderSkyView___cloudy_sky______aa_0_1__ad_2048_ed0afb84be is currently run by worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063)
+2026-01-09 14:17:53 INFO: [pid 24067] Worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063) running   PrepareFolderSkyView(_input_params={"cloudy_sky": "uniform", "cpu_count": 7, "grid_filter": "*", "min_sensor_count": 200, "model": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/DLA_Study.hbjson", "params_folder": "__params", "radiance_parameters": "-aa 0.1 -ad 2048 -ar 64", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"}, radiance_parameters=-aa 0.1 -ad 2048 -ar 64)
+2026-01-09 14:17:53 INFO: [pid 24067] Worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063) new requirements      PrepareFolderSkyView(_input_params={"cloudy_sky": "uniform", "cpu_count": 7, "grid_filter": "*", "min_sensor_count": 200, "model": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/DLA_Study.hbjson", "params_folder": "__params", "radiance_parameters": "-aa 0.1 -ad 2048 -ar 64", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"}, radiance_parameters=-aa 0.1 -ad 2048 -ar 64)
+2026-01-09 14:17:53 DEBUG: Checking if _SkyViewPrepareFolder_f01f4ea6Orchestrator(_input_params={"simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view", "model": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/DLA_Study.hbjson", "cpu_count": 7, "min_sensor_count": 200, "cloudy_sky": "uniform", "grid_filter": "*"}) is complete
+2026-01-09 14:17:53 DEBUG: Checking if CreateOctree(_input_params={"cloudy_sky": "uniform", "cpu_count": 7, "grid_filter": "*", "min_sensor_count": 200, "model": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/DLA_Study.hbjson", "params_folder": "__params", "radiance_parameters": "-aa 0.1 -ad 2048 -ar 64", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"}, black_out=default, include_aperture=include) is complete
+2026-01-09 14:17:53 DEBUG: Checking if SplitGridFolder(_input_params={"cloudy_sky": "uniform", "cpu_count": 7, "grid_filter": "*", "min_sensor_count": 200, "model": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/DLA_Study.hbjson", "params_folder": "__params", "radiance_parameters": "-aa 0.1 -ad 2048 -ar 64", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"}) is complete
+2026-01-09 14:17:53 INFO: Informed scheduler that task   _SkyViewPrepareFolder_f01f4ea6Orchestrator___simulation_fol_9a4a7c43dc   has status   PENDING
+2026-01-09 14:17:53 DEBUG: Checking if CreateRadFolder(_input_params={"cloudy_sky": "uniform", "cpu_count": 7, "grid_filter": "*", "min_sensor_count": 200, "model": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/DLA_Study.hbjson", "params_folder": "__params", "radiance_parameters": "-aa 0.1 -ad 2048 -ar 64", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"}) is complete
+2026-01-09 14:17:53 INFO: Informed scheduler that task   SplitGridFolder___cloudy_sky_____05247562de   has status   PENDING
+2026-01-09 14:17:53 INFO: Informed scheduler that task   CreateRadFolder___cloudy_sky_____05247562de   has status   PENDING
+2026-01-09 14:17:53 DEBUG: Checking if GenerateSky(_input_params={"cloudy_sky": "uniform", "cpu_count": 7, "grid_filter": "*", "min_sensor_count": 200, "model": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/DLA_Study.hbjson", "params_folder": "__params", "radiance_parameters": "-aa 0.1 -ad 2048 -ar 64", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"}, illuminance=100000.0) is complete
+2026-01-09 14:17:53 INFO: Informed scheduler that task   CreateOctree___cloudy_sky_____default_include_c650ed9fe9   has status   PENDING
+2026-01-09 14:17:53 INFO: Informed scheduler that task   GenerateSky___cloudy_sky_____100000_0_3d031b21fd   has status   PENDING
+2026-01-09 14:17:53 INFO: Informed scheduler that task   PrepareFolderSkyView___cloudy_sky______aa_0_1__ad_2048_ed0afb84be   has status   PENDING
+2026-01-09 14:17:53 DEBUG: Asking scheduler for work...
+2026-01-09 14:17:53 DEBUG: Pending tasks: 10
+2026-01-09 14:17:53 DEBUG: Asking scheduler for work...
+2026-01-09 14:17:53 DEBUG: Pending tasks: 9
+2026-01-09 14:17:53 INFO: [pid 24068] Worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063) running   CreateRadFolder(_input_params={"cloudy_sky": "uniform", "cpu_count": 7, "grid_filter": "*", "min_sensor_count": 200, "model": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/DLA_Study.hbjson", "params_folder": "__params", "radiance_parameters": "-aa 0.1 -ad 2048 -ar 64", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"})
+2026-01-09 14:17:53 INFO: CreateRadFolder: copying input artifact input_model from /Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/DLA_Study.hbjson ...
+2026-01-09 14:17:53 DEBUG: Asking scheduler for work...
+2026-01-09 14:17:53 DEBUG: Done
+2026-01-09 14:17:53 DEBUG: There are no more tasks to run at this time
+2026-01-09 14:17:53 DEBUG: CreateRadFolder___cloudy_sky_____05247562de is currently run by worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063)
+2026-01-09 14:17:53 DEBUG: GenerateSky___cloudy_sky_____100000_0_3d031b21fd is currently run by worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063)
+2026-01-09 14:17:53 INFO: [pid 24069] Worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063) running   GenerateSky(_input_params={"cloudy_sky": "uniform", "cpu_count": 7, "grid_filter": "*", "min_sensor_count": 200, "model": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/DLA_Study.hbjson", "params_folder": "__params", "radiance_parameters": "-aa 0.1 -ad 2048 -ar 64", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"}, illuminance=100000.0)
+2026-01-09 14:17:53 INFO: GenerateSky: finished copying artifacts...
+2026-01-09 14:17:53 INFO: Started running GenerateSky...
+2026-01-09 14:17:53 INFO: CreateRadFolder: finished copying artifacts...
+2026-01-09 14:17:53 INFO: Started running CreateRadFolder...
+2026-01-09 14:17:54 INFO: GenerateSky: copying output artifact sky to /Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/resources/input.sky ...
+2026-01-09 14:17:54 INFO: ...finished running GenerateSky in 0:00:00
+2026-01-09 14:17:54 INFO: [pid 24069] Worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063) done      GenerateSky(_input_params={"cloudy_sky": "uniform", "cpu_count": 7, "grid_filter": "*", "min_sensor_count": 200, "model": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/DLA_Study.hbjson", "params_folder": "__params", "radiance_parameters": "-aa 0.1 -ad 2048 -ar 64", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"}, illuminance=100000.0)
+2026-01-09 14:17:54 INFO: Informed scheduler that task   GenerateSky___cloudy_sky_____100000_0_3d031b21fd   has status   DONE
+2026-01-09 14:17:54 DEBUG: Asking scheduler for work...
+2026-01-09 14:17:54 DEBUG: Done
+2026-01-09 14:17:54 DEBUG: There are no more tasks to run at this time
+2026-01-09 14:17:54 DEBUG: CreateRadFolder___cloudy_sky_____05247562de is currently run by worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063)
+2026-01-09 14:17:55 DEBUG: Asking scheduler for work...
+2026-01-09 14:17:55 DEBUG: Done
+2026-01-09 14:17:55 DEBUG: There are no more tasks to run at this time
+2026-01-09 14:17:55 DEBUG: CreateRadFolder___cloudy_sky_____05247562de is currently run by worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063)
+2026-01-09 14:17:56 DEBUG: Asking scheduler for work...
+2026-01-09 14:17:56 DEBUG: Done
+2026-01-09 14:17:56 DEBUG: There are no more tasks to run at this time
+2026-01-09 14:17:56 DEBUG: CreateRadFolder___cloudy_sky_____05247562de is currently run by worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063)
+2026-01-09 14:17:57 DEBUG: Asking scheduler for work...
+2026-01-09 14:17:57 DEBUG: Done
+2026-01-09 14:17:57 DEBUG: There are no more tasks to run at this time
+2026-01-09 14:17:57 DEBUG: CreateRadFolder___cloudy_sky_____05247562de is currently run by worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063)
+2026-01-09 14:17:58 DEBUG: Asking scheduler for work...
+2026-01-09 14:17:58 DEBUG: Done
+2026-01-09 14:17:58 DEBUG: There are no more tasks to run at this time
+2026-01-09 14:17:58 DEBUG: CreateRadFolder___cloudy_sky_____05247562de is currently run by worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063)
+2026-01-09 14:17:58 INFO: /private/var/folders/ww/12z6q0wj4c527ftkk7sxqb680000gp/T/CreateRadFolder-6lu_9pdxWarning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: Warning: Roughness values above .2 is uncommon.
+2026-01-09 14:17:58 INFO: CreateRadFolder: creating an empty folder for optional artifact bsdf-folder at /var/folders/ww/12z6q0wj4c527ftkk7sxqb680000gp/T/CreateRadFolder-6lu_9pdx/model/bsdf ...
+2026-01-09 14:17:58 INFO: CreateRadFolder: copying output artifact model-folder to /Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/model ...
+2026-01-09 14:17:58 INFO: CreateRadFolder: copying output artifact bsdf-folder to /Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/model/bsdf ...
+2026-01-09 14:17:58 INFO: CreateRadFolder: copying output artifact model-sensor-grids-file to /Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/resources/grids_info.json ...
+2026-01-09 14:17:58 INFO: ...finished running CreateRadFolder in 0:00:05
+2026-01-09 14:17:58 INFO: [pid 24068] Worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063) done      CreateRadFolder(_input_params={"cloudy_sky": "uniform", "cpu_count": 7, "grid_filter": "*", "min_sensor_count": 200, "model": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/DLA_Study.hbjson", "params_folder": "__params", "radiance_parameters": "-aa 0.1 -ad 2048 -ar 64", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"})
+2026-01-09 14:17:58 INFO: Informed scheduler that task   CreateRadFolder___cloudy_sky_____05247562de   has status   DONE
+2026-01-09 14:17:58 DEBUG: Asking scheduler for work...
+2026-01-09 14:17:58 DEBUG: Pending tasks: 8
+2026-01-09 14:17:58 DEBUG: Asking scheduler for work...
+2026-01-09 14:17:58 DEBUG: Pending tasks: 7
+2026-01-09 14:17:58 INFO: [pid 24077] Worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063) running   SplitGridFolder(_input_params={"cloudy_sky": "uniform", "cpu_count": 7, "grid_filter": "*", "min_sensor_count": 200, "model": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/DLA_Study.hbjson", "params_folder": "__params", "radiance_parameters": "-aa 0.1 -ad 2048 -ar 64", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"})
+2026-01-09 14:17:58 DEBUG: Asking scheduler for work...
+2026-01-09 14:17:58 INFO: SplitGridFolder: copying input artifact input_folder from /Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/model/grid ...
+2026-01-09 14:17:58 DEBUG: Done
+2026-01-09 14:17:58 DEBUG: There are no more tasks to run at this time
+2026-01-09 14:17:58 DEBUG: SplitGridFolder___cloudy_sky_____05247562de is currently run by worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063)
+2026-01-09 14:17:58 DEBUG: CreateOctree___cloudy_sky_____default_include_c650ed9fe9 is currently run by worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063)
+2026-01-09 14:17:58 INFO: SplitGridFolder: finished copying artifacts...
+2026-01-09 14:17:58 INFO: Started running SplitGridFolder...
+2026-01-09 14:17:58 INFO: [pid 24078] Worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063) running   CreateOctree(_input_params={"cloudy_sky": "uniform", "cpu_count": 7, "grid_filter": "*", "min_sensor_count": 200, "model": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/DLA_Study.hbjson", "params_folder": "__params", "radiance_parameters": "-aa 0.1 -ad 2048 -ar 64", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"}, black_out=default, include_aperture=include)
+2026-01-09 14:17:58 INFO: CreateOctree: copying input artifact model from /Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/model ...
+2026-01-09 14:17:58 INFO: CreateOctree: copying input artifact sky from /Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/resources/input.sky ...
+2026-01-09 14:17:58 INFO: CreateOctree: finished copying artifacts...
+2026-01-09 14:17:58 INFO: Started running CreateOctree...
+2026-01-09 14:17:59 INFO: Distributed 294 sensors among 1 grids with 294 sensors each.
+2026-01-09 14:17:59 INFO: SplitGridFolder: copying output artifact output-folder to /Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/resources/grid ...
+2026-01-09 14:17:59 INFO: SplitGridFolder: copying output artifact dist-info to /Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/initial_results/_redist_info.json ...
+2026-01-09 14:17:59 INFO: ...finished running SplitGridFolder in 0:00:00
+2026-01-09 14:17:59 INFO: [pid 24077] Worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063) done      SplitGridFolder(_input_params={"cloudy_sky": "uniform", "cpu_count": 7, "grid_filter": "*", "min_sensor_count": 200, "model": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/DLA_Study.hbjson", "params_folder": "__params", "radiance_parameters": "-aa 0.1 -ad 2048 -ar 64", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"})
+2026-01-09 14:17:59 INFO: Informed scheduler that task   SplitGridFolder___cloudy_sky_____05247562de   has status   DONE
+2026-01-09 14:17:59 DEBUG: Asking scheduler for work...
+2026-01-09 14:17:59 DEBUG: Done
+2026-01-09 14:17:59 DEBUG: There are no more tasks to run at this time
+2026-01-09 14:17:59 DEBUG: CreateOctree___cloudy_sky_____default_include_c650ed9fe9 is currently run by worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063)
+2026-01-09 14:18:00 INFO: oconv: warning - non-planar vertex for polygon "facade_110_grey_precast_concrete_2157_b2d69594"
+2026-01-09 14:18:00 INFO: CreateOctree: copying output artifact scene-file to /Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/resources/scene.oct ...
+2026-01-09 14:18:00 INFO: ...finished running CreateOctree in 0:00:01
+2026-01-09 14:18:00 INFO: [pid 24078] Worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063) done      CreateOctree(_input_params={"cloudy_sky": "uniform", "cpu_count": 7, "grid_filter": "*", "min_sensor_count": 200, "model": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/DLA_Study.hbjson", "params_folder": "__params", "radiance_parameters": "-aa 0.1 -ad 2048 -ar 64", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"}, black_out=default, include_aperture=include)
+2026-01-09 14:18:00 INFO: Informed scheduler that task   CreateOctree___cloudy_sky_____default_include_c650ed9fe9   has status   DONE
+2026-01-09 14:18:00 DEBUG: Asking scheduler for work...
+2026-01-09 14:18:00 DEBUG: Pending tasks: 6
+2026-01-09 14:18:00 DEBUG: Asking scheduler for work...
+2026-01-09 14:18:00 DEBUG: Done
+2026-01-09 14:18:00 DEBUG: There are no more tasks to run at this time
+2026-01-09 14:18:00 DEBUG: _SkyViewPrepareFolder_f01f4ea6Orchestrator___simulation_fol_9a4a7c43dc is currently run by worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063)
+2026-01-09 14:18:00 INFO: [pid 24088] Worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063) running   _SkyViewPrepareFolder_f01f4ea6Orchestrator(_input_params={"simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view", "model": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/DLA_Study.hbjson", "cpu_count": 7, "min_sensor_count": 200, "cloudy_sky": "uniform", "grid_filter": "*"})
+2026-01-09 14:18:00 INFO: [pid 24088] Worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063) done      _SkyViewPrepareFolder_f01f4ea6Orchestrator(_input_params={"simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view", "model": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/DLA_Study.hbjson", "cpu_count": 7, "min_sensor_count": 200, "cloudy_sky": "uniform", "grid_filter": "*"})
+2026-01-09 14:18:00 INFO: Informed scheduler that task   _SkyViewPrepareFolder_f01f4ea6Orchestrator___simulation_fol_9a4a7c43dc   has status   DONE
+2026-01-09 14:18:00 DEBUG: Asking scheduler for work...
+2026-01-09 14:18:00 DEBUG: Pending tasks: 5
+2026-01-09 14:18:00 DEBUG: Asking scheduler for work...
+2026-01-09 14:18:00 DEBUG: Done
+2026-01-09 14:18:00 DEBUG: There are no more tasks to run at this time
+2026-01-09 14:18:00 DEBUG: PrepareFolderSkyView___cloudy_sky______aa_0_1__ad_2048_ed0afb84be is currently run by worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063)
+2026-01-09 14:18:00 INFO: [pid 24089] Worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063) running   PrepareFolderSkyView(_input_params={"cloudy_sky": "uniform", "cpu_count": 7, "grid_filter": "*", "min_sensor_count": 200, "model": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/DLA_Study.hbjson", "params_folder": "__params", "radiance_parameters": "-aa 0.1 -ad 2048 -ar 64", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"}, radiance_parameters=-aa 0.1 -ad 2048 -ar 64)
+2026-01-09 14:18:00 INFO: PrepareFolderSkyView: copying output artifact model-folder to /Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/model ...
+2026-01-09 14:18:00 INFO: PrepareFolderSkyView: copying output artifact resources to /Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/resources ...
+2026-01-09 14:18:00 INFO: PrepareFolderSkyView: copying output artifact initial-results to /Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/initial_results ...
+2026-01-09 14:18:00 INFO: PrepareFolderSkyView: copying output parameters sensor-grids to /Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/__params/resources/grid/_info.json ...
+2026-01-09 14:18:00 INFO: [pid 24089] Worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063) done      PrepareFolderSkyView(_input_params={"cloudy_sky": "uniform", "cpu_count": 7, "grid_filter": "*", "min_sensor_count": 200, "model": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/DLA_Study.hbjson", "params_folder": "__params", "radiance_parameters": "-aa 0.1 -ad 2048 -ar 64", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"}, radiance_parameters=-aa 0.1 -ad 2048 -ar 64)
+2026-01-09 14:18:00 INFO: Informed scheduler that task   PrepareFolderSkyView___cloudy_sky______aa_0_1__ad_2048_ed0afb84be   has status   DONE
+2026-01-09 14:18:00 DEBUG: Asking scheduler for work...
+2026-01-09 14:18:00 DEBUG: Pending tasks: 4
+2026-01-09 14:18:00 DEBUG: Asking scheduler for work...
+2026-01-09 14:18:00 DEBUG: Done
+2026-01-09 14:18:00 DEBUG: There are no more tasks to run at this time
+2026-01-09 14:18:00 DEBUG: SkyViewRayTracing___cloudy_sky_____05247562de is currently run by worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063)
+2026-01-09 14:18:00 INFO: [pid 24090] Worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063) running   SkyViewRayTracing(_input_params={"cloudy_sky": "uniform", "cpu_count": 7, "grid_filter": "*", "min_sensor_count": 200, "model": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/DLA_Study.hbjson", "params_folder": "__params", "radiance_parameters": "-aa 0.1 -ad 2048 -ar 64", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"})
+2026-01-09 14:18:00 INFO: [pid 24090] Worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063) new requirements      SkyViewRayTracing(_input_params={"cloudy_sky": "uniform", "cpu_count": 7, "grid_filter": "*", "min_sensor_count": 200, "model": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/DLA_Study.hbjson", "params_folder": "__params", "radiance_parameters": "-aa 0.1 -ad 2048 -ar 64", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"})
+2026-01-09 14:18:00 DEBUG: Checking if SkyViewRayTracingLoop(_input_params={"cloudy_sky": "uniform", "cpu_count": 7, "grid_filter": "*", "min_sensor_count": 200, "model": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/DLA_Study.hbjson", "params_folder": "__params", "radiance_parameters": "-aa 0.1 -ad 2048 -ar 64", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"}, fixed_radiance_parameters=-I -ab 1 -h, item={"name": "0", "identifier": "0", "full_id": "0", "group": "", "count": 294}) is complete
+2026-01-09 14:18:00 DEBUG: Checking if PrepareFolderSkyView(_input_params={"cloudy_sky": "uniform", "cpu_count": 7, "grid_filter": "*", "min_sensor_count": 200, "model": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/DLA_Study.hbjson", "params_folder": "__params", "radiance_parameters": "-aa 0.1 -ad 2048 -ar 64", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"}, radiance_parameters=-aa 0.1 -ad 2048 -ar 64) is complete
+2026-01-09 14:18:00 INFO: Informed scheduler that task   SkyViewRayTracingLoop___cloudy_sky______I__ab_1__h___name____0____i_f038dc04be   has status   PENDING
+2026-01-09 14:18:00 INFO: Informed scheduler that task   PrepareFolderSkyView___cloudy_sky______aa_0_1__ad_2048_ed0afb84be   has status   DONE
+2026-01-09 14:18:00 INFO: Informed scheduler that task   SkyViewRayTracing___cloudy_sky_____05247562de   has status   PENDING
+2026-01-09 14:18:00 DEBUG: Asking scheduler for work...
+2026-01-09 14:18:00 DEBUG: Pending tasks: 5
+2026-01-09 14:18:00 DEBUG: Asking scheduler for work...
+2026-01-09 14:18:00 DEBUG: Done
+2026-01-09 14:18:00 DEBUG: There are no more tasks to run at this time
+2026-01-09 14:18:00 DEBUG: SkyViewRayTracingLoop___cloudy_sky______I__ab_1__h___name____0____i_f038dc04be is currently run by worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063)
+2026-01-09 14:18:00 INFO: [pid 24091] Worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063) running   SkyViewRayTracingLoop(_input_params={"cloudy_sky": "uniform", "cpu_count": 7, "grid_filter": "*", "min_sensor_count": 200, "model": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/DLA_Study.hbjson", "params_folder": "__params", "radiance_parameters": "-aa 0.1 -ad 2048 -ar 64", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"}, fixed_radiance_parameters=-I -ab 1 -h, item={"name": "0", "identifier": "0", "full_id": "0", "group": "", "count": 294})
+2026-01-09 14:18:00 INFO: SkyViewRayTracingLoop: copying input artifact scene_file from /Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/resources/scene.oct ...
+2026-01-09 14:18:00 INFO: SkyViewRayTracingLoop: copying input artifact grid from /Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/resources/grid/0.pts ...
+2026-01-09 14:18:00 INFO: SkyViewRayTracingLoop: copying input artifact bsdf_folder from /Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/model/bsdf ...
+2026-01-09 14:18:00 INFO: SkyViewRayTracingLoop: finished copying artifacts...
+2026-01-09 14:18:00 INFO: Started running SkyViewRayTracingLoop...
+2026-01-09 14:18:01 DEBUG: Asking scheduler for work...
+2026-01-09 14:18:01 DEBUG: Done
+2026-01-09 14:18:01 DEBUG: There are no more tasks to run at this time
+2026-01-09 14:18:01 DEBUG: SkyViewRayTracingLoop___cloudy_sky______I__ab_1__h___name____0____i_f038dc04be is currently run by worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063)
+2026-01-09 14:18:02 DEBUG: Asking scheduler for work...
+2026-01-09 14:18:02 DEBUG: Done
+2026-01-09 14:18:02 DEBUG: There are no more tasks to run at this time
+2026-01-09 14:18:02 DEBUG: SkyViewRayTracingLoop___cloudy_sky______I__ab_1__h___name____0____i_f038dc04be is currently run by worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063)
+2026-01-09 14:18:03 DEBUG: Asking scheduler for work...
+2026-01-09 14:18:03 DEBUG: Done
+2026-01-09 14:18:03 DEBUG: There are no more tasks to run at this time
+2026-01-09 14:18:03 DEBUG: SkyViewRayTracingLoop___cloudy_sky______I__ab_1__h___name____0____i_f038dc04be is currently run by worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063)
+2026-01-09 14:18:04 DEBUG: Asking scheduler for work...
+2026-01-09 14:18:04 DEBUG: Done
+2026-01-09 14:18:04 DEBUG: There are no more tasks to run at this time
+2026-01-09 14:18:04 DEBUG: SkyViewRayTracingLoop___cloudy_sky______I__ab_1__h___name____0____i_f038dc04be is currently run by worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063)
+2026-01-09 14:18:05 DEBUG: Asking scheduler for work...
+2026-01-09 14:18:05 DEBUG: Done
+2026-01-09 14:18:05 DEBUG: There are no more tasks to run at this time
+2026-01-09 14:18:05 DEBUG: SkyViewRayTracingLoop___cloudy_sky______I__ab_1__h___name____0____i_f038dc04be is currently run by worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063)
+2026-01-09 14:18:06 DEBUG: Asking scheduler for work...
+2026-01-09 14:18:06 DEBUG: Done
+2026-01-09 14:18:06 DEBUG: There are no more tasks to run at this time
+2026-01-09 14:18:06 DEBUG: SkyViewRayTracingLoop___cloudy_sky______I__ab_1__h___name____0____i_f038dc04be is currently run by worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063)
+2026-01-09 14:18:06 INFO: rtrace: warning - non-planar vertex for polygon "facade_110_grey_precast_concrete_2157_b2d69594"
+2026-01-09 14:18:06 INFO: SkyViewRayTracingLoop: copying output artifact result to /Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/initial_results/0.res ...
+2026-01-09 14:18:06 INFO: ...finished running SkyViewRayTracingLoop in 0:00:06
+2026-01-09 14:18:06 INFO: [pid 24091] Worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063) done      SkyViewRayTracingLoop(_input_params={"cloudy_sky": "uniform", "cpu_count": 7, "grid_filter": "*", "min_sensor_count": 200, "model": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/DLA_Study.hbjson", "params_folder": "__params", "radiance_parameters": "-aa 0.1 -ad 2048 -ar 64", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"}, fixed_radiance_parameters=-I -ab 1 -h, item={"name": "0", "identifier": "0", "full_id": "0", "group": "", "count": 294})
+2026-01-09 14:18:06 INFO: Informed scheduler that task   SkyViewRayTracingLoop___cloudy_sky______I__ab_1__h___name____0____i_f038dc04be   has status   DONE
+2026-01-09 14:18:06 DEBUG: Asking scheduler for work...
+2026-01-09 14:18:06 DEBUG: Pending tasks: 4
+2026-01-09 14:18:06 DEBUG: Asking scheduler for work...
+2026-01-09 14:18:06 DEBUG: Done
+2026-01-09 14:18:06 DEBUG: There are no more tasks to run at this time
+2026-01-09 14:18:06 DEBUG: SkyViewRayTracing___cloudy_sky_____05247562de is currently run by worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063)
+2026-01-09 14:18:06 INFO: [pid 24099] Worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063) running   SkyViewRayTracing(_input_params={"cloudy_sky": "uniform", "cpu_count": 7, "grid_filter": "*", "min_sensor_count": 200, "model": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/DLA_Study.hbjson", "params_folder": "__params", "radiance_parameters": "-aa 0.1 -ad 2048 -ar 64", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"})
+2026-01-09 14:18:06 INFO: [pid 24099] Worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063) done      SkyViewRayTracing(_input_params={"cloudy_sky": "uniform", "cpu_count": 7, "grid_filter": "*", "min_sensor_count": 200, "model": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/DLA_Study.hbjson", "params_folder": "__params", "radiance_parameters": "-aa 0.1 -ad 2048 -ar 64", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"})
+2026-01-09 14:18:06 INFO: Informed scheduler that task   SkyViewRayTracing___cloudy_sky_____05247562de   has status   DONE
+2026-01-09 14:18:06 DEBUG: Asking scheduler for work...
+2026-01-09 14:18:06 DEBUG: Pending tasks: 3
+2026-01-09 14:18:06 DEBUG: Asking scheduler for work...
+2026-01-09 14:18:06 DEBUG: Done
+2026-01-09 14:18:06 DEBUG: There are no more tasks to run at this time
+2026-01-09 14:18:06 DEBUG: PostprocessSkyView___cloudy_sky_____05247562de is currently run by worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063)
+2026-01-09 14:18:06 INFO: [pid 24100] Worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063) running   PostprocessSkyView(_input_params={"cloudy_sky": "uniform", "cpu_count": 7, "grid_filter": "*", "min_sensor_count": 200, "model": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/DLA_Study.hbjson", "params_folder": "__params", "radiance_parameters": "-aa 0.1 -ad 2048 -ar 64", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"})
+2026-01-09 14:18:06 INFO: [pid 24100] Worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063) new requirements      PostprocessSkyView(_input_params={"cloudy_sky": "uniform", "cpu_count": 7, "grid_filter": "*", "min_sensor_count": 200, "model": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/DLA_Study.hbjson", "params_folder": "__params", "radiance_parameters": "-aa 0.1 -ad 2048 -ar 64", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"})
+2026-01-09 14:18:06 DEBUG: Checking if _SkyViewPostprocess_f01f4ea6Orchestrator(_input_params={"simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view", "input_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/initial_results", "grids_info": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/resources/grids_info.json"}) is complete
+2026-01-09 14:18:06 DEBUG: Checking if CopyGridInfo(_input_params={"grids_info": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/resources/grids_info.json", "input_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/initial_results", "params_folder": "__params", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"}) is complete
+2026-01-09 14:18:06 DEBUG: Checking if RestructureResults(_input_params={"grids_info": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/resources/grids_info.json", "input_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/initial_results", "params_folder": "__params", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"}) is complete
+2026-01-09 14:18:06 INFO: Informed scheduler that task   _SkyViewPostprocess_f01f4ea6Orchestrator___simulation_fol_ec0c7467d8   has status   PENDING
+2026-01-09 14:18:06 INFO: Informed scheduler that task   RestructureResults___grids_info_____1dab96c73d   has status   PENDING
+2026-01-09 14:18:06 INFO: Informed scheduler that task   CopyGridInfo___grids_info_____1dab96c73d   has status   PENDING
+2026-01-09 14:18:06 INFO: Informed scheduler that task   PostprocessSkyView___cloudy_sky_____05247562de   has status   PENDING
+2026-01-09 14:18:06 DEBUG: Asking scheduler for work...
+2026-01-09 14:18:06 DEBUG: Pending tasks: 6
+2026-01-09 14:18:06 DEBUG: Asking scheduler for work...
+2026-01-09 14:18:06 DEBUG: Pending tasks: 5
+2026-01-09 14:18:06 INFO: [pid 24101] Worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063) running   CopyGridInfo(_input_params={"grids_info": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/resources/grids_info.json", "input_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/initial_results", "params_folder": "__params", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"})
+2026-01-09 14:18:06 INFO: CopyGridInfo: copying input artifact src from /Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/resources/grids_info.json ...
+2026-01-09 14:18:06 DEBUG: Asking scheduler for work...
+2026-01-09 14:18:06 INFO: CopyGridInfo: finished copying artifacts...
+2026-01-09 14:18:06 INFO: Started running CopyGridInfo...
+2026-01-09 14:18:06 DEBUG: Done
+2026-01-09 14:18:06 DEBUG: There are no more tasks to run at this time
+2026-01-09 14:18:06 DEBUG: CopyGridInfo___grids_info_____1dab96c73d is currently run by worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063)
+2026-01-09 14:18:06 DEBUG: RestructureResults___grids_info_____1dab96c73d is currently run by worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063)
+2026-01-09 14:18:06 INFO: [pid 24102] Worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063) running   RestructureResults(_input_params={"grids_info": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/resources/grids_info.json", "input_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/initial_results", "params_folder": "__params", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"})
+2026-01-09 14:18:06 INFO: RestructureResults: copying input artifact input_folder from /Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/initial_results ...
+2026-01-09 14:18:06 INFO: RestructureResults: finished copying artifacts...
+2026-01-09 14:18:06 INFO: Started running RestructureResults...
+2026-01-09 14:18:06 INFO: copying input file...
+2026-01-09 14:18:06 INFO: CopyGridInfo: copying output artifact dst to /Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/results/sky_view/grids_info.json ...
+2026-01-09 14:18:06 INFO: ...finished running CopyGridInfo in 0:00:00
+2026-01-09 14:18:06 INFO: [pid 24101] Worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063) done      CopyGridInfo(_input_params={"grids_info": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/resources/grids_info.json", "input_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/initial_results", "params_folder": "__params", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"})
+2026-01-09 14:18:06 INFO: Informed scheduler that task   CopyGridInfo___grids_info_____1dab96c73d   has status   DONE
+2026-01-09 14:18:06 DEBUG: Asking scheduler for work...
+2026-01-09 14:18:06 DEBUG: Done
+2026-01-09 14:18:06 DEBUG: There are no more tasks to run at this time
+2026-01-09 14:18:06 DEBUG: RestructureResults___grids_info_____1dab96c73d is currently run by worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063)
+2026-01-09 14:18:07 INFO: RestructureResults: copying output artifact output-folder to /Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/results/sky_view ...
+2026-01-09 14:18:07 INFO: ...finished running RestructureResults in 0:00:00
+2026-01-09 14:18:07 INFO: [pid 24102] Worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063) done      RestructureResults(_input_params={"grids_info": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/resources/grids_info.json", "input_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/initial_results", "params_folder": "__params", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"})
+2026-01-09 14:18:07 INFO: Informed scheduler that task   RestructureResults___grids_info_____1dab96c73d   has status   DONE
+2026-01-09 14:18:07 DEBUG: Asking scheduler for work...
+2026-01-09 14:18:07 DEBUG: Pending tasks: 4
+2026-01-09 14:18:07 DEBUG: Asking scheduler for work...
+2026-01-09 14:18:07 DEBUG: Done
+2026-01-09 14:18:07 DEBUG: There are no more tasks to run at this time
+2026-01-09 14:18:07 DEBUG: _SkyViewPostprocess_f01f4ea6Orchestrator___simulation_fol_ec0c7467d8 is currently run by worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063)
+2026-01-09 14:18:07 INFO: [pid 24107] Worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063) running   _SkyViewPostprocess_f01f4ea6Orchestrator(_input_params={"simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view", "input_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/initial_results", "grids_info": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/resources/grids_info.json"})
+2026-01-09 14:18:07 INFO: [pid 24107] Worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063) done      _SkyViewPostprocess_f01f4ea6Orchestrator(_input_params={"simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view", "input_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/initial_results", "grids_info": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/resources/grids_info.json"})
+2026-01-09 14:18:07 INFO: Informed scheduler that task   _SkyViewPostprocess_f01f4ea6Orchestrator___simulation_fol_ec0c7467d8   has status   DONE
+2026-01-09 14:18:07 DEBUG: Asking scheduler for work...
+2026-01-09 14:18:07 DEBUG: Pending tasks: 3
+2026-01-09 14:18:07 DEBUG: Asking scheduler for work...
+2026-01-09 14:18:07 DEBUG: Done
+2026-01-09 14:18:07 DEBUG: There are no more tasks to run at this time
+2026-01-09 14:18:07 DEBUG: PostprocessSkyView___cloudy_sky_____05247562de is currently run by worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063)
+2026-01-09 14:18:07 INFO: [pid 24108] Worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063) running   PostprocessSkyView(_input_params={"cloudy_sky": "uniform", "cpu_count": 7, "grid_filter": "*", "min_sensor_count": 200, "model": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/DLA_Study.hbjson", "params_folder": "__params", "radiance_parameters": "-aa 0.1 -ad 2048 -ar 64", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"})
+2026-01-09 14:18:07 INFO: PostprocessSkyView: copying output artifact results to /Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/results ...
+2026-01-09 14:18:07 INFO: [pid 24108] Worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063) done      PostprocessSkyView(_input_params={"cloudy_sky": "uniform", "cpu_count": 7, "grid_filter": "*", "min_sensor_count": 200, "model": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/DLA_Study.hbjson", "params_folder": "__params", "radiance_parameters": "-aa 0.1 -ad 2048 -ar 64", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"})
+2026-01-09 14:18:07 INFO: Informed scheduler that task   PostprocessSkyView___cloudy_sky_____05247562de   has status   DONE
+2026-01-09 14:18:07 DEBUG: Asking scheduler for work...
+2026-01-09 14:18:07 DEBUG: Pending tasks: 2
+2026-01-09 14:18:07 DEBUG: Asking scheduler for work...
+2026-01-09 14:18:07 DEBUG: Done
+2026-01-09 14:18:07 DEBUG: There are no more tasks to run at this time
+2026-01-09 14:18:07 DEBUG: _Main_f01f4ea6Orchestrator___cloudy_sky_____ab6fefd279 is currently run by worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063)
+2026-01-09 14:18:07 INFO: [pid 24109] Worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063) running   _Main_f01f4ea6Orchestrator(_input_params={"cloudy_sky": "uniform", "cpu_count": 7, "grid_filter": "*", "min_sensor_count": 200, "model": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/DLA_Study.hbjson", "radiance_parameters": "-aa 0.1 -ad 2048 -ar 64", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"})
+2026-01-09 14:18:07 INFO: [pid 24109] Worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063) done      _Main_f01f4ea6Orchestrator(_input_params={"cloudy_sky": "uniform", "cpu_count": 7, "grid_filter": "*", "min_sensor_count": 200, "model": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/DLA_Study.hbjson", "radiance_parameters": "-aa 0.1 -ad 2048 -ar 64", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"})
+2026-01-09 14:18:07 INFO: Informed scheduler that task   _Main_f01f4ea6Orchestrator___cloudy_sky_____ab6fefd279   has status   DONE
+2026-01-09 14:18:07 DEBUG: Asking scheduler for work...
+2026-01-09 14:18:07 DEBUG: Pending tasks: 1
+2026-01-09 14:18:07 DEBUG: Asking scheduler for work...
+2026-01-09 14:18:07 DEBUG: Done
+2026-01-09 14:18:07 DEBUG: There are no more tasks to run at this time
+2026-01-09 14:18:07 DEBUG: LetSkyViewFly___cloudy_sky_____ab6fefd279 is currently run by worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063)
+2026-01-09 14:18:07 INFO: [pid 24110] Worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063) running   LetSkyViewFly(_input_params={"cloudy_sky": "uniform", "cpu_count": 7, "grid_filter": "*", "min_sensor_count": 200, "model": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/DLA_Study.hbjson", "radiance_parameters": "-aa 0.1 -ad 2048 -ar 64", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"})
+2026-01-09 14:18:07 INFO: [pid 24110] Worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063) done      LetSkyViewFly(_input_params={"cloudy_sky": "uniform", "cpu_count": 7, "grid_filter": "*", "min_sensor_count": 200, "model": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view/DLA_Study.hbjson", "radiance_parameters": "-aa 0.1 -ad 2048 -ar 64", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"})
+2026-01-09 14:18:07 INFO: Informed scheduler that task   LetSkyViewFly___cloudy_sky_____ab6fefd279   has status   DONE
+2026-01-09 14:18:07 DEBUG: Asking scheduler for work...
+2026-01-09 14:18:07 DEBUG: Done
+2026-01-09 14:18:07 DEBUG: There are no more tasks to run at this time
+2026-01-09 14:18:07 INFO: Worker Worker(salt=250432788, workers=7, host=staff-net-hix-0520.intern.ethz.ch, username=jmccarty, pid=24063) was stopped. Shutting down Keep-Alive thread
+2026-01-09 14:18:07 INFO: 
+===== Luigi Execution Summary =====
+
+Scheduled 14 tasks of which:
+* 14 ran successfully:
+    - 1 CopyGridInfo(...)
+    - 1 CreateOctree(...)
+    - 1 CreateRadFolder(...)
+    - 1 GenerateSky(...)
+    - 1 LetSkyViewFly(...)
+    ...
+
+This progress looks :) because there were no failed tasks or missing dependencies
+
+===== Luigi Execution Summary =====
+

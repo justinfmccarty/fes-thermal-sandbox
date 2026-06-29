@@ -1,0 +1,1201 @@
+============================================================
+MATERIAL ASSIGNMENT DEBUG
+============================================================
+Using debug models: python_debug/
+Debug sensor count: 1,084 (vs 17,400 full)
+Testing 3 scenarios:
+  - scenario_000: (0.0, 0.0) - least natural
+  - scenario_012: (0.5, 0.5) - mixed
+  - scenario_024: (1.0, 1.0) - most natural
+Period: warmest week (~168 hours)
+============================================================
+
+Debug directories:
+  Raytracing results: /Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/debug_raytracing_results
+  Outputs: /Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/debug_outputs
+   Loaded grid-material mapping: baseline=True, scenarios=True
+
+============================================================
+PHASE 1: RAYTRACING
+============================================================
+
+1. Running baseline raytracing...
+======================================================================
+BASELINE RAYTRACING
+======================================================================
+
+1. Setting up material database...
+
+2. Baseline feather files already exist, skipping raytracing...
+   Direct: /Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/debug_raytracing_results/baseline_direct.feather
+   Diffuse: /Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/debug_raytracing_results/baseline_diffuse.feather
+   ✓ Baseline raytracing complete
+
+2. Running scenario raytracing...
+
+   Running scenario_000: (0.0, 0.0)
+
+Running scenario scenario_000: (0.0, 0.0)
+   Warmest day: June 29 (day 180)
+   Peak temperature: 34.0°C at hour 4310
+   Using warmest_week period: 168 hours
+ - Running 2-Phase DDS with 6 workers
+ - Current surface is (root)
+ - Initializing the weather file.
+     - Filtered WEA: 119 daylight hours (from 168 total hours)
+     - Weather file initialized in 0.01 seconds
+ - Starting Part 1 (total).
+     - oconv
+         - oconv completed in 0.55 seconds
+     - rfluxmtx
+         - rfluxmtx completed in 35.83 seconds
+     - gendaymtx
+         - gendaymtx completed in 0.02 seconds
+     - dctimestep | rmtxop
+         - dctimestep | rmtxop completed in 2.91 seconds
+     - Part 1 completed in 39.31 seconds
+ - Starting Part 2 (direct).
+     - oconv
+         - oconv completed in 0.63 seconds
+     - rfluxmtx
+         - rfluxmtx completed in 5.71 seconds
+     - gendaymtx
+         - gendaymtx completed in 0.01 seconds
+     - dctimestep | rmtxop
+         - dctimestep | rmtxop completed in 2.88 seconds
+     - Part 2 completed in 9.24 seconds
+ - Starting Part 3 (sun).
+     - create_sun_discs
+         - create_sun_discs completed in 0.06 seconds
+     - oconv
+         - oconv completed in 0.62 seconds
+     - rcontrib
+         - rcontrib completed in 153.85 seconds
+     - gendaymtx
+         - gendaymtx completed in 0.1 seconds
+     - dctimestep | rmtxop
+         - dctimestep | rmtxop completed in 3.75 seconds
+     - Part 3 completed in 158.37 seconds
+ - Simulation completed in 206.94 seconds
+   Saved direct irradiance: /Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/debug_raytracing_results/scenario_000_direct.feather
+   Saved diffuse irradiance: /Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/debug_raytracing_results/scenario_000_diffuse.feather
+Warning: No rows found for scenario scenario_000 in /Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grid_records/scenario_grid_materials_template.csv
+   ✓ scenario_000 raytracing complete
+
+   Running scenario_012: (0.5, 0.5)
+
+Running scenario scenario_012: (0.5, 0.5)
+   Warmest day: June 29 (day 180)
+   Peak temperature: 34.0°C at hour 4310
+   Using warmest_week period: 168 hours
+ - Running 2-Phase DDS with 6 workers
+ - Current surface is (root)
+ - Initializing the weather file.
+     - Filtered WEA: 119 daylight hours (from 168 total hours)
+     - Weather file initialized in 0.01 seconds
+ - Starting Part 1 (total).
+     - oconv
+         - oconv completed in 0.53 seconds
+     - rfluxmtx
+         - rfluxmtx completed in 39.94 seconds
+     - gendaymtx
+         - gendaymtx completed in 0.02 seconds
+     - dctimestep | rmtxop
+         - dctimestep | rmtxop completed in 3.16 seconds
+     - Part 1 completed in 43.65 seconds
+ - Starting Part 2 (direct).
+     - oconv
+         - oconv completed in 0.62 seconds
+     - rfluxmtx
+         - rfluxmtx completed in 5.85 seconds
+     - gendaymtx
+         - gendaymtx completed in 0.01 seconds
+     - dctimestep | rmtxop
+         - dctimestep | rmtxop completed in 2.92 seconds
+     - Part 2 completed in 9.41 seconds
+ - Starting Part 3 (sun).
+     - create_sun_discs
+         - create_sun_discs completed in 0.05 seconds
+     - oconv
+         - oconv completed in 0.62 seconds
+     - rcontrib
+         - rcontrib completed in 163.6 seconds
+     - gendaymtx
+         - gendaymtx completed in 0.1 seconds
+     - dctimestep | rmtxop
+         - dctimestep | rmtxop completed in 3.82 seconds
+     - Part 3 completed in 168.19 seconds
+ - Simulation completed in 221.27 seconds
+   Saved direct irradiance: /Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/debug_raytracing_results/scenario_012_direct.feather
+   Saved diffuse irradiance: /Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/debug_raytracing_results/scenario_012_diffuse.feather
+Warning: No rows found for scenario scenario_012 in /Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grid_records/scenario_grid_materials_template.csv
+   ✓ scenario_012 raytracing complete
+
+   Running scenario_024: (1.0, 1.0)
+
+Running scenario scenario_024: (1.0, 1.0)
+   Warmest day: June 29 (day 180)
+   Peak temperature: 34.0°C at hour 4310
+   Using warmest_week period: 168 hours
+ - Running 2-Phase DDS with 6 workers
+ - Current surface is (root)
+ - Initializing the weather file.
+     - Filtered WEA: 119 daylight hours (from 168 total hours)
+     - Weather file initialized in 0.01 seconds
+ - Starting Part 1 (total).
+     - oconv
+         - oconv completed in 0.52 seconds
+     - rfluxmtx
+         - rfluxmtx completed in 24.51 seconds
+     - gendaymtx
+         - gendaymtx completed in 0.02 seconds
+     - dctimestep | rmtxop
+         - dctimestep | rmtxop completed in 3.0 seconds
+     - Part 1 completed in 28.04 seconds
+ - Starting Part 2 (direct).
+     - oconv
+         - oconv completed in 0.62 seconds
+     - rfluxmtx
+         - rfluxmtx completed in 6.19 seconds
+     - gendaymtx
+         - gendaymtx completed in 0.01 seconds
+     - dctimestep | rmtxop
+         - dctimestep | rmtxop completed in 3.07 seconds
+     - Part 2 completed in 9.91 seconds
+ - Starting Part 3 (sun).
+     - create_sun_discs
+         - create_sun_discs completed in 0.05 seconds
+     - oconv
+         - oconv completed in 0.62 seconds
+     - rcontrib
+         - rcontrib completed in 167.35 seconds
+     - gendaymtx
+         - gendaymtx completed in 0.1 seconds
+     - dctimestep | rmtxop
+         - dctimestep | rmtxop completed in 3.9 seconds
+     - Part 3 completed in 172.03 seconds
+ - Simulation completed in 209.99 seconds
+   Saved direct irradiance: /Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/debug_raytracing_results/scenario_024_direct.feather
+   Saved diffuse irradiance: /Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/debug_raytracing_results/scenario_024_diffuse.feather
+Warning: No rows found for scenario scenario_024 in /Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grid_records/scenario_grid_materials_template.csv
+   ✓ scenario_024 raytracing complete
+
+============================================================
+PHASE 2: BIOPHYSICAL ANALYSIS
+============================================================
+
+Running biophysical analysis for 3 scenarios...
+======================================================================
+PHASE 2: Tree Risk Analysis
+======================================================================
+
+1. Loading baseline results...
+   Using all available data (baseline=full year, scenarios=warmest week)
+
+2. Loading tree and sensor points...
+   Loaded 147 tree points
+   Loaded 1083 sensor points
+
+3. Using provided scenario feather files...
+
+4. Analyzing tree risk...
+   Using sequential processing
+
+   Analyzing scenario_000...
+Running simulation for baseline scenario_000
+   Pre-computing material properties for 147 trees...
+No grid material mapping found for tree 0
+No grid material mapping found for tree 1
+No grid material mapping found for tree 2
+No grid material mapping found for tree 3
+No grid material mapping found for tree 4
+No grid material mapping found for tree 5
+No grid material mapping found for tree 6
+No grid material mapping found for tree 7
+No grid material mapping found for tree 8
+No grid material mapping found for tree 9
+No grid material mapping found for tree 10
+No grid material mapping found for tree 11
+No grid material mapping found for tree 12
+No grid material mapping found for tree 13
+No grid material mapping found for tree 14
+No grid material mapping found for tree 15
+No grid material mapping found for tree 16
+No grid material mapping found for tree 17
+No grid material mapping found for tree 18
+No grid material mapping found for tree 19
+No grid material mapping found for tree 20
+No grid material mapping found for tree 21
+No grid material mapping found for tree 22
+No grid material mapping found for tree 23
+No grid material mapping found for tree 24
+No grid material mapping found for tree 25
+No grid material mapping found for tree 26
+No grid material mapping found for tree 27
+No grid material mapping found for tree 28
+No grid material mapping found for tree 29
+No grid material mapping found for tree 30
+No grid material mapping found for tree 31
+No grid material mapping found for tree 32
+No grid material mapping found for tree 33
+No grid material mapping found for tree 34
+No grid material mapping found for tree 35
+No grid material mapping found for tree 36
+No grid material mapping found for tree 37
+No grid material mapping found for tree 38
+No grid material mapping found for tree 39
+No grid material mapping found for tree 40
+No grid material mapping found for tree 41
+No grid material mapping found for tree 42
+No grid material mapping found for tree 43
+No grid material mapping found for tree 44
+No grid material mapping found for tree 45
+No grid material mapping found for tree 46
+No grid material mapping found for tree 47
+No grid material mapping found for tree 48
+No grid material mapping found for tree 49
+No grid material mapping found for tree 50
+No grid material mapping found for tree 51
+No grid material mapping found for tree 52
+No grid material mapping found for tree 53
+No grid material mapping found for tree 54
+No grid material mapping found for tree 55
+No grid material mapping found for tree 56
+No grid material mapping found for tree 57
+No grid material mapping found for tree 58
+No grid material mapping found for tree 59
+No grid material mapping found for tree 60
+No grid material mapping found for tree 61
+No grid material mapping found for tree 62
+No grid material mapping found for tree 63
+No grid material mapping found for tree 64
+No grid material mapping found for tree 65
+No grid material mapping found for tree 66
+No grid material mapping found for tree 67
+No grid material mapping found for tree 68
+No grid material mapping found for tree 69
+No grid material mapping found for tree 70
+No grid material mapping found for tree 71
+No grid material mapping found for tree 72
+No grid material mapping found for tree 73
+No grid material mapping found for tree 74
+No grid material mapping found for tree 75
+No grid material mapping found for tree 76
+No grid material mapping found for tree 77
+No grid material mapping found for tree 78
+No grid material mapping found for tree 79
+No grid material mapping found for tree 80
+No grid material mapping found for tree 81
+No grid material mapping found for tree 82
+No grid material mapping found for tree 83
+No grid material mapping found for tree 84
+No grid material mapping found for tree 85
+No grid material mapping found for tree 86
+No grid material mapping found for tree 87
+No grid material mapping found for tree 88
+No grid material mapping found for tree 89
+No grid material mapping found for tree 90
+No grid material mapping found for tree 91
+No grid material mapping found for tree 92
+No grid material mapping found for tree 93
+No grid material mapping found for tree 94
+No grid material mapping found for tree 95
+No grid material mapping found for tree 96
+No grid material mapping found for tree 97
+No grid material mapping found for tree 98
+No grid material mapping found for tree 99
+No grid material mapping found for tree 100
+No grid material mapping found for tree 101
+No grid material mapping found for tree 102
+No grid material mapping found for tree 103
+No grid material mapping found for tree 104
+No grid material mapping found for tree 105
+No grid material mapping found for tree 106
+No grid material mapping found for tree 107
+No grid material mapping found for tree 108
+No grid material mapping found for tree 109
+No grid material mapping found for tree 110
+No grid material mapping found for tree 111
+No grid material mapping found for tree 112
+No grid material mapping found for tree 113
+No grid material mapping found for tree 114
+No grid material mapping found for tree 115
+No grid material mapping found for tree 116
+No grid material mapping found for tree 117
+No grid material mapping found for tree 118
+No grid material mapping found for tree 119
+No grid material mapping found for tree 120
+No grid material mapping found for tree 121
+No grid material mapping found for tree 122
+No grid material mapping found for tree 123
+No grid material mapping found for tree 124
+No grid material mapping found for tree 125
+No grid material mapping found for tree 126
+No grid material mapping found for tree 127
+No grid material mapping found for tree 128
+No grid material mapping found for tree 129
+No grid material mapping found for tree 130
+No grid material mapping found for tree 131
+No grid material mapping found for tree 132
+No grid material mapping found for tree 133
+No grid material mapping found for tree 134
+No grid material mapping found for tree 135
+No grid material mapping found for tree 136
+No grid material mapping found for tree 137
+No grid material mapping found for tree 138
+No grid material mapping found for tree 139
+No grid material mapping found for tree 140
+No grid material mapping found for tree 141
+No grid material mapping found for tree 142
+No grid material mapping found for tree 143
+No grid material mapping found for tree 144
+No grid material mapping found for tree 145
+No grid material mapping found for tree 146
+   Simulating 8760 hours for 147 trees...
+Running simulation for scenario scenario_000
+   Pre-computing material properties for 147 trees...
+No grid material mapping found for tree 0
+No grid material mapping found for tree 1
+No grid material mapping found for tree 2
+No grid material mapping found for tree 3
+No grid material mapping found for tree 4
+No grid material mapping found for tree 5
+No grid material mapping found for tree 6
+No grid material mapping found for tree 7
+No grid material mapping found for tree 8
+No grid material mapping found for tree 9
+No grid material mapping found for tree 10
+No grid material mapping found for tree 11
+No grid material mapping found for tree 12
+No grid material mapping found for tree 13
+No grid material mapping found for tree 14
+No grid material mapping found for tree 15
+No grid material mapping found for tree 16
+No grid material mapping found for tree 17
+No grid material mapping found for tree 18
+No grid material mapping found for tree 19
+No grid material mapping found for tree 20
+No grid material mapping found for tree 21
+No grid material mapping found for tree 22
+No grid material mapping found for tree 23
+No grid material mapping found for tree 24
+No grid material mapping found for tree 25
+No grid material mapping found for tree 26
+No grid material mapping found for tree 27
+No grid material mapping found for tree 28
+No grid material mapping found for tree 29
+No grid material mapping found for tree 30
+No grid material mapping found for tree 31
+No grid material mapping found for tree 32
+No grid material mapping found for tree 33
+No grid material mapping found for tree 34
+No grid material mapping found for tree 35
+No grid material mapping found for tree 36
+No grid material mapping found for tree 37
+No grid material mapping found for tree 38
+No grid material mapping found for tree 39
+No grid material mapping found for tree 40
+No grid material mapping found for tree 41
+No grid material mapping found for tree 42
+No grid material mapping found for tree 43
+No grid material mapping found for tree 44
+No grid material mapping found for tree 45
+No grid material mapping found for tree 46
+No grid material mapping found for tree 47
+No grid material mapping found for tree 48
+No grid material mapping found for tree 49
+No grid material mapping found for tree 50
+No grid material mapping found for tree 51
+No grid material mapping found for tree 52
+No grid material mapping found for tree 53
+No grid material mapping found for tree 54
+No grid material mapping found for tree 55
+No grid material mapping found for tree 56
+No grid material mapping found for tree 57
+No grid material mapping found for tree 58
+No grid material mapping found for tree 59
+No grid material mapping found for tree 60
+No grid material mapping found for tree 61
+No grid material mapping found for tree 62
+No grid material mapping found for tree 63
+No grid material mapping found for tree 64
+No grid material mapping found for tree 65
+No grid material mapping found for tree 66
+No grid material mapping found for tree 67
+No grid material mapping found for tree 68
+No grid material mapping found for tree 69
+No grid material mapping found for tree 70
+No grid material mapping found for tree 71
+No grid material mapping found for tree 72
+No grid material mapping found for tree 73
+No grid material mapping found for tree 74
+No grid material mapping found for tree 75
+No grid material mapping found for tree 76
+No grid material mapping found for tree 77
+No grid material mapping found for tree 78
+No grid material mapping found for tree 79
+No grid material mapping found for tree 80
+No grid material mapping found for tree 81
+No grid material mapping found for tree 82
+No grid material mapping found for tree 83
+No grid material mapping found for tree 84
+No grid material mapping found for tree 85
+No grid material mapping found for tree 86
+No grid material mapping found for tree 87
+No grid material mapping found for tree 88
+No grid material mapping found for tree 89
+No grid material mapping found for tree 90
+No grid material mapping found for tree 91
+No grid material mapping found for tree 92
+No grid material mapping found for tree 93
+No grid material mapping found for tree 94
+No grid material mapping found for tree 95
+No grid material mapping found for tree 96
+No grid material mapping found for tree 97
+No grid material mapping found for tree 98
+No grid material mapping found for tree 99
+No grid material mapping found for tree 100
+No grid material mapping found for tree 101
+No grid material mapping found for tree 102
+No grid material mapping found for tree 103
+No grid material mapping found for tree 104
+No grid material mapping found for tree 105
+No grid material mapping found for tree 106
+No grid material mapping found for tree 107
+No grid material mapping found for tree 108
+No grid material mapping found for tree 109
+No grid material mapping found for tree 110
+No grid material mapping found for tree 111
+No grid material mapping found for tree 112
+No grid material mapping found for tree 113
+No grid material mapping found for tree 114
+No grid material mapping found for tree 115
+No grid material mapping found for tree 116
+No grid material mapping found for tree 117
+No grid material mapping found for tree 118
+No grid material mapping found for tree 119
+No grid material mapping found for tree 120
+No grid material mapping found for tree 121
+No grid material mapping found for tree 122
+No grid material mapping found for tree 123
+No grid material mapping found for tree 124
+No grid material mapping found for tree 125
+No grid material mapping found for tree 126
+No grid material mapping found for tree 127
+No grid material mapping found for tree 128
+No grid material mapping found for tree 129
+No grid material mapping found for tree 130
+No grid material mapping found for tree 131
+No grid material mapping found for tree 132
+No grid material mapping found for tree 133
+No grid material mapping found for tree 134
+No grid material mapping found for tree 135
+No grid material mapping found for tree 136
+No grid material mapping found for tree 137
+No grid material mapping found for tree 138
+No grid material mapping found for tree 139
+No grid material mapping found for tree 140
+No grid material mapping found for tree 141
+No grid material mapping found for tree 142
+No grid material mapping found for tree 143
+No grid material mapping found for tree 144
+No grid material mapping found for tree 145
+No grid material mapping found for tree 146
+   Simulating 8760 hours for 147 trees...
+Calculating stress metrics for baseline and scenario_000
+   ✓ Analysis time: 94.97s
+
+   Analyzing scenario_012...
+Running simulation for baseline scenario_012
+   Pre-computing material properties for 147 trees...
+No grid material mapping found for tree 0
+No grid material mapping found for tree 1
+No grid material mapping found for tree 2
+No grid material mapping found for tree 3
+No grid material mapping found for tree 4
+No grid material mapping found for tree 5
+No grid material mapping found for tree 6
+No grid material mapping found for tree 7
+No grid material mapping found for tree 8
+No grid material mapping found for tree 9
+No grid material mapping found for tree 10
+No grid material mapping found for tree 11
+No grid material mapping found for tree 12
+No grid material mapping found for tree 13
+No grid material mapping found for tree 14
+No grid material mapping found for tree 15
+No grid material mapping found for tree 16
+No grid material mapping found for tree 17
+No grid material mapping found for tree 18
+No grid material mapping found for tree 19
+No grid material mapping found for tree 20
+No grid material mapping found for tree 21
+No grid material mapping found for tree 22
+No grid material mapping found for tree 23
+No grid material mapping found for tree 24
+No grid material mapping found for tree 25
+No grid material mapping found for tree 26
+No grid material mapping found for tree 27
+No grid material mapping found for tree 28
+No grid material mapping found for tree 29
+No grid material mapping found for tree 30
+No grid material mapping found for tree 31
+No grid material mapping found for tree 32
+No grid material mapping found for tree 33
+No grid material mapping found for tree 34
+No grid material mapping found for tree 35
+No grid material mapping found for tree 36
+No grid material mapping found for tree 37
+No grid material mapping found for tree 38
+No grid material mapping found for tree 39
+No grid material mapping found for tree 40
+No grid material mapping found for tree 41
+No grid material mapping found for tree 42
+No grid material mapping found for tree 43
+No grid material mapping found for tree 44
+No grid material mapping found for tree 45
+No grid material mapping found for tree 46
+No grid material mapping found for tree 47
+No grid material mapping found for tree 48
+No grid material mapping found for tree 49
+No grid material mapping found for tree 50
+No grid material mapping found for tree 51
+No grid material mapping found for tree 52
+No grid material mapping found for tree 53
+No grid material mapping found for tree 54
+No grid material mapping found for tree 55
+No grid material mapping found for tree 56
+No grid material mapping found for tree 57
+No grid material mapping found for tree 58
+No grid material mapping found for tree 59
+No grid material mapping found for tree 60
+No grid material mapping found for tree 61
+No grid material mapping found for tree 62
+No grid material mapping found for tree 63
+No grid material mapping found for tree 64
+No grid material mapping found for tree 65
+No grid material mapping found for tree 66
+No grid material mapping found for tree 67
+No grid material mapping found for tree 68
+No grid material mapping found for tree 69
+No grid material mapping found for tree 70
+No grid material mapping found for tree 71
+No grid material mapping found for tree 72
+No grid material mapping found for tree 73
+No grid material mapping found for tree 74
+No grid material mapping found for tree 75
+No grid material mapping found for tree 76
+No grid material mapping found for tree 77
+No grid material mapping found for tree 78
+No grid material mapping found for tree 79
+No grid material mapping found for tree 80
+No grid material mapping found for tree 81
+No grid material mapping found for tree 82
+No grid material mapping found for tree 83
+No grid material mapping found for tree 84
+No grid material mapping found for tree 85
+No grid material mapping found for tree 86
+No grid material mapping found for tree 87
+No grid material mapping found for tree 88
+No grid material mapping found for tree 89
+No grid material mapping found for tree 90
+No grid material mapping found for tree 91
+No grid material mapping found for tree 92
+No grid material mapping found for tree 93
+No grid material mapping found for tree 94
+No grid material mapping found for tree 95
+No grid material mapping found for tree 96
+No grid material mapping found for tree 97
+No grid material mapping found for tree 98
+No grid material mapping found for tree 99
+No grid material mapping found for tree 100
+No grid material mapping found for tree 101
+No grid material mapping found for tree 102
+No grid material mapping found for tree 103
+No grid material mapping found for tree 104
+No grid material mapping found for tree 105
+No grid material mapping found for tree 106
+No grid material mapping found for tree 107
+No grid material mapping found for tree 108
+No grid material mapping found for tree 109
+No grid material mapping found for tree 110
+No grid material mapping found for tree 111
+No grid material mapping found for tree 112
+No grid material mapping found for tree 113
+No grid material mapping found for tree 114
+No grid material mapping found for tree 115
+No grid material mapping found for tree 116
+No grid material mapping found for tree 117
+No grid material mapping found for tree 118
+No grid material mapping found for tree 119
+No grid material mapping found for tree 120
+No grid material mapping found for tree 121
+No grid material mapping found for tree 122
+No grid material mapping found for tree 123
+No grid material mapping found for tree 124
+No grid material mapping found for tree 125
+No grid material mapping found for tree 126
+No grid material mapping found for tree 127
+No grid material mapping found for tree 128
+No grid material mapping found for tree 129
+No grid material mapping found for tree 130
+No grid material mapping found for tree 131
+No grid material mapping found for tree 132
+No grid material mapping found for tree 133
+No grid material mapping found for tree 134
+No grid material mapping found for tree 135
+No grid material mapping found for tree 136
+No grid material mapping found for tree 137
+No grid material mapping found for tree 138
+No grid material mapping found for tree 139
+No grid material mapping found for tree 140
+No grid material mapping found for tree 141
+No grid material mapping found for tree 142
+No grid material mapping found for tree 143
+No grid material mapping found for tree 144
+No grid material mapping found for tree 145
+No grid material mapping found for tree 146
+   Simulating 8760 hours for 147 trees...
+Running simulation for scenario scenario_012
+   Pre-computing material properties for 147 trees...
+No grid material mapping found for tree 0
+No grid material mapping found for tree 1
+No grid material mapping found for tree 2
+No grid material mapping found for tree 3
+No grid material mapping found for tree 4
+No grid material mapping found for tree 5
+No grid material mapping found for tree 6
+No grid material mapping found for tree 7
+No grid material mapping found for tree 8
+No grid material mapping found for tree 9
+No grid material mapping found for tree 10
+No grid material mapping found for tree 11
+No grid material mapping found for tree 12
+No grid material mapping found for tree 13
+No grid material mapping found for tree 14
+No grid material mapping found for tree 15
+No grid material mapping found for tree 16
+No grid material mapping found for tree 17
+No grid material mapping found for tree 18
+No grid material mapping found for tree 19
+No grid material mapping found for tree 20
+No grid material mapping found for tree 21
+No grid material mapping found for tree 22
+No grid material mapping found for tree 23
+No grid material mapping found for tree 24
+No grid material mapping found for tree 25
+No grid material mapping found for tree 26
+No grid material mapping found for tree 27
+No grid material mapping found for tree 28
+No grid material mapping found for tree 29
+No grid material mapping found for tree 30
+No grid material mapping found for tree 31
+No grid material mapping found for tree 32
+No grid material mapping found for tree 33
+No grid material mapping found for tree 34
+No grid material mapping found for tree 35
+No grid material mapping found for tree 36
+No grid material mapping found for tree 37
+No grid material mapping found for tree 38
+No grid material mapping found for tree 39
+No grid material mapping found for tree 40
+No grid material mapping found for tree 41
+No grid material mapping found for tree 42
+No grid material mapping found for tree 43
+No grid material mapping found for tree 44
+No grid material mapping found for tree 45
+No grid material mapping found for tree 46
+No grid material mapping found for tree 47
+No grid material mapping found for tree 48
+No grid material mapping found for tree 49
+No grid material mapping found for tree 50
+No grid material mapping found for tree 51
+No grid material mapping found for tree 52
+No grid material mapping found for tree 53
+No grid material mapping found for tree 54
+No grid material mapping found for tree 55
+No grid material mapping found for tree 56
+No grid material mapping found for tree 57
+No grid material mapping found for tree 58
+No grid material mapping found for tree 59
+No grid material mapping found for tree 60
+No grid material mapping found for tree 61
+No grid material mapping found for tree 62
+No grid material mapping found for tree 63
+No grid material mapping found for tree 64
+No grid material mapping found for tree 65
+No grid material mapping found for tree 66
+No grid material mapping found for tree 67
+No grid material mapping found for tree 68
+No grid material mapping found for tree 69
+No grid material mapping found for tree 70
+No grid material mapping found for tree 71
+No grid material mapping found for tree 72
+No grid material mapping found for tree 73
+No grid material mapping found for tree 74
+No grid material mapping found for tree 75
+No grid material mapping found for tree 76
+No grid material mapping found for tree 77
+No grid material mapping found for tree 78
+No grid material mapping found for tree 79
+No grid material mapping found for tree 80
+No grid material mapping found for tree 81
+No grid material mapping found for tree 82
+No grid material mapping found for tree 83
+No grid material mapping found for tree 84
+No grid material mapping found for tree 85
+No grid material mapping found for tree 86
+No grid material mapping found for tree 87
+No grid material mapping found for tree 88
+No grid material mapping found for tree 89
+No grid material mapping found for tree 90
+No grid material mapping found for tree 91
+No grid material mapping found for tree 92
+No grid material mapping found for tree 93
+No grid material mapping found for tree 94
+No grid material mapping found for tree 95
+No grid material mapping found for tree 96
+No grid material mapping found for tree 97
+No grid material mapping found for tree 98
+No grid material mapping found for tree 99
+No grid material mapping found for tree 100
+No grid material mapping found for tree 101
+No grid material mapping found for tree 102
+No grid material mapping found for tree 103
+No grid material mapping found for tree 104
+No grid material mapping found for tree 105
+No grid material mapping found for tree 106
+No grid material mapping found for tree 107
+No grid material mapping found for tree 108
+No grid material mapping found for tree 109
+No grid material mapping found for tree 110
+No grid material mapping found for tree 111
+No grid material mapping found for tree 112
+No grid material mapping found for tree 113
+No grid material mapping found for tree 114
+No grid material mapping found for tree 115
+No grid material mapping found for tree 116
+No grid material mapping found for tree 117
+No grid material mapping found for tree 118
+No grid material mapping found for tree 119
+No grid material mapping found for tree 120
+No grid material mapping found for tree 121
+No grid material mapping found for tree 122
+No grid material mapping found for tree 123
+No grid material mapping found for tree 124
+No grid material mapping found for tree 125
+No grid material mapping found for tree 126
+No grid material mapping found for tree 127
+No grid material mapping found for tree 128
+No grid material mapping found for tree 129
+No grid material mapping found for tree 130
+No grid material mapping found for tree 131
+No grid material mapping found for tree 132
+No grid material mapping found for tree 133
+No grid material mapping found for tree 134
+No grid material mapping found for tree 135
+No grid material mapping found for tree 136
+No grid material mapping found for tree 137
+No grid material mapping found for tree 138
+No grid material mapping found for tree 139
+No grid material mapping found for tree 140
+No grid material mapping found for tree 141
+No grid material mapping found for tree 142
+No grid material mapping found for tree 143
+No grid material mapping found for tree 144
+No grid material mapping found for tree 145
+No grid material mapping found for tree 146
+   Simulating 8760 hours for 147 trees...
+Calculating stress metrics for baseline and scenario_012
+   ✓ Analysis time: 95.76s
+
+   Analyzing scenario_024...
+Running simulation for baseline scenario_024
+   Pre-computing material properties for 147 trees...
+No grid material mapping found for tree 0
+No grid material mapping found for tree 1
+No grid material mapping found for tree 2
+No grid material mapping found for tree 3
+No grid material mapping found for tree 4
+No grid material mapping found for tree 5
+No grid material mapping found for tree 6
+No grid material mapping found for tree 7
+No grid material mapping found for tree 8
+No grid material mapping found for tree 9
+No grid material mapping found for tree 10
+No grid material mapping found for tree 11
+No grid material mapping found for tree 12
+No grid material mapping found for tree 13
+No grid material mapping found for tree 14
+No grid material mapping found for tree 15
+No grid material mapping found for tree 16
+No grid material mapping found for tree 17
+No grid material mapping found for tree 18
+No grid material mapping found for tree 19
+No grid material mapping found for tree 20
+No grid material mapping found for tree 21
+No grid material mapping found for tree 22
+No grid material mapping found for tree 23
+No grid material mapping found for tree 24
+No grid material mapping found for tree 25
+No grid material mapping found for tree 26
+No grid material mapping found for tree 27
+No grid material mapping found for tree 28
+No grid material mapping found for tree 29
+No grid material mapping found for tree 30
+No grid material mapping found for tree 31
+No grid material mapping found for tree 32
+No grid material mapping found for tree 33
+No grid material mapping found for tree 34
+No grid material mapping found for tree 35
+No grid material mapping found for tree 36
+No grid material mapping found for tree 37
+No grid material mapping found for tree 38
+No grid material mapping found for tree 39
+No grid material mapping found for tree 40
+No grid material mapping found for tree 41
+No grid material mapping found for tree 42
+No grid material mapping found for tree 43
+No grid material mapping found for tree 44
+No grid material mapping found for tree 45
+No grid material mapping found for tree 46
+No grid material mapping found for tree 47
+No grid material mapping found for tree 48
+No grid material mapping found for tree 49
+No grid material mapping found for tree 50
+No grid material mapping found for tree 51
+No grid material mapping found for tree 52
+No grid material mapping found for tree 53
+No grid material mapping found for tree 54
+No grid material mapping found for tree 55
+No grid material mapping found for tree 56
+No grid material mapping found for tree 57
+No grid material mapping found for tree 58
+No grid material mapping found for tree 59
+No grid material mapping found for tree 60
+No grid material mapping found for tree 61
+No grid material mapping found for tree 62
+No grid material mapping found for tree 63
+No grid material mapping found for tree 64
+No grid material mapping found for tree 65
+No grid material mapping found for tree 66
+No grid material mapping found for tree 67
+No grid material mapping found for tree 68
+No grid material mapping found for tree 69
+No grid material mapping found for tree 70
+No grid material mapping found for tree 71
+No grid material mapping found for tree 72
+No grid material mapping found for tree 73
+No grid material mapping found for tree 74
+No grid material mapping found for tree 75
+No grid material mapping found for tree 76
+No grid material mapping found for tree 77
+No grid material mapping found for tree 78
+No grid material mapping found for tree 79
+No grid material mapping found for tree 80
+No grid material mapping found for tree 81
+No grid material mapping found for tree 82
+No grid material mapping found for tree 83
+No grid material mapping found for tree 84
+No grid material mapping found for tree 85
+No grid material mapping found for tree 86
+No grid material mapping found for tree 87
+No grid material mapping found for tree 88
+No grid material mapping found for tree 89
+No grid material mapping found for tree 90
+No grid material mapping found for tree 91
+No grid material mapping found for tree 92
+No grid material mapping found for tree 93
+No grid material mapping found for tree 94
+No grid material mapping found for tree 95
+No grid material mapping found for tree 96
+No grid material mapping found for tree 97
+No grid material mapping found for tree 98
+No grid material mapping found for tree 99
+No grid material mapping found for tree 100
+No grid material mapping found for tree 101
+No grid material mapping found for tree 102
+No grid material mapping found for tree 103
+No grid material mapping found for tree 104
+No grid material mapping found for tree 105
+No grid material mapping found for tree 106
+No grid material mapping found for tree 107
+No grid material mapping found for tree 108
+No grid material mapping found for tree 109
+No grid material mapping found for tree 110
+No grid material mapping found for tree 111
+No grid material mapping found for tree 112
+No grid material mapping found for tree 113
+No grid material mapping found for tree 114
+No grid material mapping found for tree 115
+No grid material mapping found for tree 116
+No grid material mapping found for tree 117
+No grid material mapping found for tree 118
+No grid material mapping found for tree 119
+No grid material mapping found for tree 120
+No grid material mapping found for tree 121
+No grid material mapping found for tree 122
+No grid material mapping found for tree 123
+No grid material mapping found for tree 124
+No grid material mapping found for tree 125
+No grid material mapping found for tree 126
+No grid material mapping found for tree 127
+No grid material mapping found for tree 128
+No grid material mapping found for tree 129
+No grid material mapping found for tree 130
+No grid material mapping found for tree 131
+No grid material mapping found for tree 132
+No grid material mapping found for tree 133
+No grid material mapping found for tree 134
+No grid material mapping found for tree 135
+No grid material mapping found for tree 136
+No grid material mapping found for tree 137
+No grid material mapping found for tree 138
+No grid material mapping found for tree 139
+No grid material mapping found for tree 140
+No grid material mapping found for tree 141
+No grid material mapping found for tree 142
+No grid material mapping found for tree 143
+No grid material mapping found for tree 144
+No grid material mapping found for tree 145
+No grid material mapping found for tree 146
+   Simulating 8760 hours for 147 trees...
+Running simulation for scenario scenario_024
+   Pre-computing material properties for 147 trees...
+No grid material mapping found for tree 0
+No grid material mapping found for tree 1
+No grid material mapping found for tree 2
+No grid material mapping found for tree 3
+No grid material mapping found for tree 4
+No grid material mapping found for tree 5
+No grid material mapping found for tree 6
+No grid material mapping found for tree 7
+No grid material mapping found for tree 8
+No grid material mapping found for tree 9
+No grid material mapping found for tree 10
+No grid material mapping found for tree 11
+No grid material mapping found for tree 12
+No grid material mapping found for tree 13
+No grid material mapping found for tree 14
+No grid material mapping found for tree 15
+No grid material mapping found for tree 16
+No grid material mapping found for tree 17
+No grid material mapping found for tree 18
+No grid material mapping found for tree 19
+No grid material mapping found for tree 20
+No grid material mapping found for tree 21
+No grid material mapping found for tree 22
+No grid material mapping found for tree 23
+No grid material mapping found for tree 24
+No grid material mapping found for tree 25
+No grid material mapping found for tree 26
+No grid material mapping found for tree 27
+No grid material mapping found for tree 28
+No grid material mapping found for tree 29
+No grid material mapping found for tree 30
+No grid material mapping found for tree 31
+No grid material mapping found for tree 32
+No grid material mapping found for tree 33
+No grid material mapping found for tree 34
+No grid material mapping found for tree 35
+No grid material mapping found for tree 36
+No grid material mapping found for tree 37
+No grid material mapping found for tree 38
+No grid material mapping found for tree 39
+No grid material mapping found for tree 40
+No grid material mapping found for tree 41
+No grid material mapping found for tree 42
+No grid material mapping found for tree 43
+No grid material mapping found for tree 44
+No grid material mapping found for tree 45
+No grid material mapping found for tree 46
+No grid material mapping found for tree 47
+No grid material mapping found for tree 48
+No grid material mapping found for tree 49
+No grid material mapping found for tree 50
+No grid material mapping found for tree 51
+No grid material mapping found for tree 52
+No grid material mapping found for tree 53
+No grid material mapping found for tree 54
+No grid material mapping found for tree 55
+No grid material mapping found for tree 56
+No grid material mapping found for tree 57
+No grid material mapping found for tree 58
+No grid material mapping found for tree 59
+No grid material mapping found for tree 60
+No grid material mapping found for tree 61
+No grid material mapping found for tree 62
+No grid material mapping found for tree 63
+No grid material mapping found for tree 64
+No grid material mapping found for tree 65
+No grid material mapping found for tree 66
+No grid material mapping found for tree 67
+No grid material mapping found for tree 68
+No grid material mapping found for tree 69
+No grid material mapping found for tree 70
+No grid material mapping found for tree 71
+No grid material mapping found for tree 72
+No grid material mapping found for tree 73
+No grid material mapping found for tree 74
+No grid material mapping found for tree 75
+No grid material mapping found for tree 76
+No grid material mapping found for tree 77
+No grid material mapping found for tree 78
+No grid material mapping found for tree 79
+No grid material mapping found for tree 80
+No grid material mapping found for tree 81
+No grid material mapping found for tree 82
+No grid material mapping found for tree 83
+No grid material mapping found for tree 84
+No grid material mapping found for tree 85
+No grid material mapping found for tree 86
+No grid material mapping found for tree 87
+No grid material mapping found for tree 88
+No grid material mapping found for tree 89
+No grid material mapping found for tree 90
+No grid material mapping found for tree 91
+No grid material mapping found for tree 92
+No grid material mapping found for tree 93
+No grid material mapping found for tree 94
+No grid material mapping found for tree 95
+No grid material mapping found for tree 96
+No grid material mapping found for tree 97
+No grid material mapping found for tree 98
+No grid material mapping found for tree 99
+No grid material mapping found for tree 100
+No grid material mapping found for tree 101
+No grid material mapping found for tree 102
+No grid material mapping found for tree 103
+No grid material mapping found for tree 104
+No grid material mapping found for tree 105
+No grid material mapping found for tree 106
+No grid material mapping found for tree 107
+No grid material mapping found for tree 108
+No grid material mapping found for tree 109
+No grid material mapping found for tree 110
+No grid material mapping found for tree 111
+No grid material mapping found for tree 112
+No grid material mapping found for tree 113
+No grid material mapping found for tree 114
+No grid material mapping found for tree 115
+No grid material mapping found for tree 116
+No grid material mapping found for tree 117
+No grid material mapping found for tree 118
+No grid material mapping found for tree 119
+No grid material mapping found for tree 120
+No grid material mapping found for tree 121
+No grid material mapping found for tree 122
+No grid material mapping found for tree 123
+No grid material mapping found for tree 124
+No grid material mapping found for tree 125
+No grid material mapping found for tree 126
+No grid material mapping found for tree 127
+No grid material mapping found for tree 128
+No grid material mapping found for tree 129
+No grid material mapping found for tree 130
+No grid material mapping found for tree 131
+No grid material mapping found for tree 132
+No grid material mapping found for tree 133
+No grid material mapping found for tree 134
+No grid material mapping found for tree 135
+No grid material mapping found for tree 136
+No grid material mapping found for tree 137
+No grid material mapping found for tree 138
+No grid material mapping found for tree 139
+No grid material mapping found for tree 140
+No grid material mapping found for tree 141
+No grid material mapping found for tree 142
+No grid material mapping found for tree 143
+No grid material mapping found for tree 144
+No grid material mapping found for tree 145
+No grid material mapping found for tree 146
+   Simulating 8760 hours for 147 trees...
+Calculating stress metrics for baseline and scenario_024
+   ✓ Analysis time: 96.15s
+
+5. Identifying most impactful material choices...
+
+   Top 5 most impactful scenarios:
+   1. scenario_000: 0.0000 risk index reduction
+      Instruction: (0.0, 0.0)
+   2. scenario_012: 0.0000 risk index reduction
+      Instruction: (0.5, 0.5)
+   3. scenario_024: 0.0000 risk index reduction
+      Instruction: (1.0, 1.0)
+
+======================================================================
+Tree risk analysis completed!
+======================================================================
+   ✓ Biophysical analysis complete
+   Copied biophysical_results_scenario_012.csv to debug_outputs/
+
+============================================================
+PHASE 3: VERIFICATION
+============================================================
+
+1. Verifying irradiance differences...
+   Correlation between scenarios:
+     scenario_000 vs scenario_012: nan
+     scenario_000 vs scenario_024: nan
+     scenario_012 vs scenario_024: nan
+   Mean absolute differences:
+     scenario_000 vs scenario_012: nan W/m²
+     scenario_000 vs scenario_024: nan W/m²
+     scenario_012 vs scenario_024: nan W/m²
+   Std dev of deltas:
+     scenario_000: nan W/m²
+     scenario_012: nan W/m²
+     scenario_024: nan W/m²
+   ✗ FAIL: Scenarios are too similar (max correlation >= 0.95)
+      This indicates scenarios may still be selecting same surfaces or not changing enough
+
+2. Verifying biophysical differences...
+
+   Checking if scenarios produce different biophysical results...
+   Hour 4354 comparison:
+     scenario_000 vs scenario_024 identical: True
+     scenario_000 vs scenario_012 identical: True
+     scenario_012 vs scenario_024 identical: True
+     ✗ WARNING: scenario_000 and scenario_024 have identical T_leaf values!
+        This suggests materials aren't affecting the simulation
+     T_leaf stats for hour 4354:
+       scenario_000: mean=20.99°C, std=0.00°C
+       scenario_012: mean=20.99°C, std=0.00°C
+       scenario_024: mean=20.99°C, std=0.00°C
+
+   Leaf Temperature Analysis (overall):
+   Baseline mean T_leaf: 3.67°C
+   Scenario 000 mean T_leaf: 3.66°C
+   Scenario 012 mean T_leaf: 3.66°C
+   Scenario 024 mean T_leaf: 3.66°C
+
+   Temperature differences:
+     scenario_000 - scenario_024: 0.00°C
+     scenario_000 - scenario_012: 0.00°C
+     scenario_012 - scenario_024: 0.00°C
+   ⚠ WARNING: Small temperature difference (0.00°C)
+      Expected > 2°C, but scenarios are different
+
+   Transpiration Analysis:
+   Baseline mean E: 0.0000 mmol m⁻² s⁻¹
+   Scenario 000 mean E: 0.0000 mmol m⁻² s⁻¹
+   Scenario 012 mean E: 0.0000 mmol m⁻² s⁻¹
+   Scenario 024 mean E: 0.0000 mmol m⁻² s⁻¹
+
+   Transpiration difference (vegetation - concrete): -0.0000 mmol m⁻² s⁻¹
+   ⚠ WARNING: Unexpected transpiration relationship
+
+============================================================
+SUMMARY
+============================================================
+✓ All tests passed!
+
+The material assignment system is working correctly:
+  - Each scenario selects different surfaces (deterministically)
+  - Irradiance patterns differ between scenarios
+  - Biophysical stress patterns differ between scenarios
+  - Vegetation scenarios show cooling benefits
+
+You can now run the full workflow with confidence.
+============================================================
+

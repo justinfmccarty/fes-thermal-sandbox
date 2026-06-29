@@ -1,0 +1,1 @@
+{"model": "DLA_Study.hbjson", "cpu-count": 7, "grid-filter": "*", "min-sensor-count": 200, "radiance-parameters": "-aa 0.1 -ad 2048 -ar 64", "cloudy-sky": "uniform", "simulation_folder": "/Users/jmccarty/Nextcloud/Projects/35_UHI_Trees_Manitoba/00_data_code/jodla_project/grasshopper/svf/sky_view"}
