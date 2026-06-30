@@ -1,3 +1,9 @@
+# Thermal Sandbox V1.0
+This is the thermal sandbox codebase and application. 
+
+
+## Using the application
+
 Here's the whole thing from scratch, assuming you just opened a brand-new terminal window. You only type the lines in the code boxes.
 
 ## Step 1 — Go to the project folder

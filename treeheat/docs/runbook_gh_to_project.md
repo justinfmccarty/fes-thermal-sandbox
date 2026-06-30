@@ -71,19 +71,21 @@ Columns for both: `grid_name`, `xcoord`, `ycoord`, `zcoord` (names may vary; tre
 > clear sensor-count error. The baseline grid is reference-only and not read by the
 > per-scenario pipeline.
 
-## Step 5 — Export material mappings
+## Step 5 — Export the baseline material mapping
 
 1. **Baseline materials** — grid cell → material name, tagged ground vs facade:
 
    `inputs/grid_records/baseline_materials.csv`
 
-   Columns: `grid_id`, `material_name`, `surface_type`
+   Columns: `grid_id`, `material_name`, `ground_or_facade` (optional: `area_m2`)
 
-2. **Scenario materials** — per-scenario grid assignments (25 rows × N grids, or use the template pattern from v0):
+2. **Scenario materials are generated, not exported.** `treeheat` derives
+   `inputs/grid_records/scenario_grid_materials.csv` from the baseline mapping
+   above plus the scenario instructions in `config/config.yaml`, using the same
+   naturalness logic as the ray tracer. It is created automatically the first
+   time biophysics runs; to (re)generate it explicitly:
 
-   `inputs/grid_records/scenario_grid_materials.csv`
-
-   Columns: `scenario_id`, `grid_id`, `material_name`
+       uv run treeheat materials --config config/config.yaml
 
 Customize `inputs/root_material_database.csv` if your site uses materials not in the starter set.
 
@@ -162,7 +164,7 @@ Open Setup → point at your project dir → Run → Results.
 - [ ] `inputs/grid_records/scenario_sensor_grid.csv` (drives biophysics)
 - [ ] `inputs/grid_records/baseline_sensor_grid.csv` (optional reference)
 - [ ] `inputs/grid_records/baseline_materials.csv`
-- [ ] `inputs/grid_records/scenario_grid_materials.csv`
+- [ ] `inputs/grid_records/scenario_grid_materials.csv` (auto-generated; `treeheat materials`)
 - [ ] `inputs/radiance/baseline_radiance_project/model/scene/envelope.{rad,mat}`
 - [ ] `inputs/radiance/scenario_radiance_project/model/scene/envelope.{rad,mat}`
 - [ ] `treeheat validate` passes

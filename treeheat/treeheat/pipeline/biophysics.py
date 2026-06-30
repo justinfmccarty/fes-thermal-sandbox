@@ -69,6 +69,22 @@ class BiophysicalScenarioRunner:
 
         grid_material_path = get_path("grid_material_mapping_file", cfg)
         scenario_grid_path = get_path("scenario_grid_materials_file", cfg)
+
+        # The scenario grid→material table is derived from the baseline mapping +
+        # config instructions. Generate it on demand if it has no scenario rows so
+        # biophysics can run without a separate manual step.
+        from treeheat.pipeline.grid_materials import (
+            scenario_rows_present,
+            write_scenario_grid_materials,
+        )
+
+        if not scenario_rows_present(cfg):
+            try:
+                out = write_scenario_grid_materials(cfg)
+                print(f" - Generated scenario grid materials: {out}")
+            except (FileNotFoundError, ValueError) as exc:
+                print(f" - Could not generate scenario grid materials: {exc}")
+
         self.grid_material_mapping = load_grid_material_mapping(
             baseline_csv_path=grid_material_path,
             scenario_csv_path=scenario_grid_path,

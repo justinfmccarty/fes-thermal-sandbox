@@ -88,6 +88,26 @@ def cmd_status(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_materials(args: argparse.Namespace) -> int:
+    config_path = _resolve_config_path(args.config)
+    reload_config(config_path)
+    cfg = get_config(config_path)
+    from treeheat.pipeline.grid_materials import write_scenario_grid_materials
+
+    try:
+        out = write_scenario_grid_materials(cfg)
+    except (FileNotFoundError, ValueError) as exc:
+        print(f"Error: {exc}", file=sys.stderr)
+        return 1
+    import pandas as pd
+
+    df = pd.read_csv(out)
+    scenario_ids = df.loc[df["scenario_id"].astype(str) != "baseline", "scenario_id"]
+    print(f"Wrote {out}")
+    print(f"  Rows: {len(df)}  Scenarios: {scenario_ids.nunique()}")
+    return 0
+
+
 def cmd_init(args: argparse.Namespace) -> int:
     try:
         report = init_project(
@@ -163,6 +183,13 @@ def main(argv: list[str] | None = None) -> int:
     status_parser = sub.add_parser("status", help="print machine-readable run-state JSON")
     status_parser.add_argument("--config", default="config/config.yaml")
     status_parser.set_defaults(func=cmd_status)
+
+    materials_parser = sub.add_parser(
+        "materials",
+        help="generate scenario_grid_materials.csv from baseline + config instructions",
+    )
+    materials_parser.add_argument("--config", default="config/config.yaml")
+    materials_parser.set_defaults(func=cmd_materials)
 
     args = parser.parse_args(argv)
     try:
