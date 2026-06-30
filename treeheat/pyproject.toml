@@ -1,0 +1,41 @@
+[project]
+name = "treeheat"
+version = "0.1.0"
+description = "Tree thermal-safety simulation pipeline (clean rebuild)"
+requires-python = ">=3.10"
+dependencies = [
+  "pyyaml",
+  "numpy",
+  "pandas",
+  "pyarrow",
+  "scipy",
+]
+
+[project.optional-dependencies]
+physics = []
+radiance = ["pyradiance"]
+geo = ["geopandas"]
+viz = ["matplotlib"]
+ui = ["streamlit"]
+dev = ["pytest", "ruff", "matplotlib"]
+
+[project.scripts]
+treeheat = "treeheat.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["treeheat"]
+force-include = { "treeheat/defaults.yaml" = "treeheat/defaults.yaml", "treeheat/project_data/base_material_library.txt" = "treeheat/project_data/base_material_library.txt", "treeheat/project_data/tree_species_database.csv" = "treeheat/project_data/tree_species_database.csv", "treeheat/project_data/root_material_database.csv" = "treeheat/project_data/root_material_database.csv", "treeheat/project_data/runbook_gh_to_project.md" = "treeheat/project_data/runbook_gh_to_project.md" }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "slow: full end-to-end acceptance gate (feathers -> biophysics -> analysis)",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"

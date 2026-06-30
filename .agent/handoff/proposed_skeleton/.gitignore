@@ -1,8 +1,0 @@
-# Python
-__pycache__/
-*.py[cod]
-*.egg-info/
-.pytest_cache/
-
-# Generated outputs (see ../03_consolidation_recommendations.md, Rec. 5)
-outputs/

@@ -81,11 +81,14 @@ physics port  →  acceptance gate passes  →  orchestration core + CLI  →  U
 
 The UI is **step 8** in the sequencing of [`03_consolidation_recommendations.md`](03_consolidation_recommendations.md). It is deliberately last: a UI built before the pipeline runs is a UI with nothing to drive.
 
-## 8. Where it lands in the skeleton
+## 8. Where it lands in v1
 
-When the time comes, add (not now — these are pointers):
+Already built (Phase 5):
 
-- `treeheat/orchestration/` — job spec, runner, provenance, run-state. The CLI (`treeheat/cli.py`) is its first consumer.
+- `treeheat/treeheat/orchestration/` — job spec, runner, provenance, run-state. The CLI (`treeheat/cli.py`) is its first consumer.
+
+Still to add (Phase 8):
+
 - `app/` (or `treeheat/ui/`) — the Streamlit skin. Depends only on the orchestration API, never on the pipeline modules directly.
 
 Keeping the skin in its own package enforces the "presentation only" boundary: if the UI ever needs to import a physics module, that's the signal it's overreaching.

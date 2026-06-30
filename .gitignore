@@ -1,9 +1,10 @@
 # =============================================================================
-# .gitignore — thermal-sandbox (v0 archive)
+# .gitignore — thermal-sandbox (v0 archive + v1 treeheat/)
 # -----------------------------------------------------------------------------
 # Goal: commit the CODE, DOCS, and small REFERENCE inputs; exclude the ~1 GB of
 # regenerable simulation OUTPUTS and throwaway debug data.
 #
+# v1 pipeline: treeheat/ (outputs/ gitignored via treeheat/.gitignore)
 # NOTE: data-retention decision recorded in .agent/local_memory/ (Phase 6, Rec. 5).
 # Heavy simulation outputs stay gitignored on disk; preserved off-machine. Repo
 # ships code + small reference data only; future project outputs live outside repo.
@@ -46,6 +47,9 @@ env/
 # ---- Regenerable result directories -----------------------------------------
 src_archive/raytracing_results/
 src_archive/outputs/
+
+# v1 generated outputs (also covered by treeheat/.gitignore)
+treeheat/outputs/
 
 # Keep headline anchor (report + paper numbers); drop heavy per-scenario CSVs + plots.
 src_archive/analysis_outputs/*

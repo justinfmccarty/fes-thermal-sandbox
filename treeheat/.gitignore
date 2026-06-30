@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# Generated outputs (see ../03_consolidation_recommendations.md, Rec. 5)
+outputs/

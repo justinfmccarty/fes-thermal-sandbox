@@ -102,6 +102,6 @@ The existing `src_archive/` is a **research codebase**: it works and produced a 
 
 1. The **science** (`METHODOLOGY.md`, the databases, the validated result).
 2. A **map** to the working code so they can port what is proven ([`04_archive_map.md`](04_archive_map.md)).
-3. A **clean, optimized skeleton** (`proposed_skeleton/`, in this handoff folder) designed for a fresh set of agents to build into — placeholders only, with a pluggable canopy engine and a single config-driven entry point.
+3. The **v1 pipeline** at top-level [`treeheat/`](../../treeheat/) — built from the retired scaffold in Phases 1–6. Pluggable canopy engine, config-driven CLI, orchestration core, acceptance gate passed.
 
-The goal is a tighter, more automatable pipeline — not a port of the old one.
+The goal was a tighter, more automatable pipeline — not a port of the old one. Phases 1–6 delivered that; Phases 7–8 remain.

@@ -165,4 +165,4 @@ run_analysis.py
    └─ plots / plot_formatting
 ```
 
-The dependency graph is clean and layered. **That is the asset worth preserving** when porting into the new skeleton — see [`03_consolidation_recommendations.md`](03_consolidation_recommendations.md).
+The dependency graph is clean and layered. **That is the asset worth preserving** — v1 at `treeheat/` implements this layering. See [`03_consolidation_recommendations.md`](03_consolidation_recommendations.md).

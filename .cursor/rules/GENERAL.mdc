@@ -1,0 +1,33 @@
+---
+description: 
+alwaysApply: true
+---
+
+You are helping extend v1 of a tree thermal-safety simulation pipeline. v0 archives
+(src_archive/, model_archive/, analysis_archive/) are READ-ONLY reference. The working
+v1 package lives at treeheat/ (Phases 1–6 complete; acceptance gate passed). Orientation
+is in .agent/handoff/.
+
+Workflow:
+1. PLAN MODE FIRST. Build a plan and reason with the human about the best approach before
+   executing. Do not start implementing until the plan is approved. The human review
+   happens in plan mode — that is the gate.
+2. AFTER execution, ALWAYS write a memory record (do not skip this once the code works):
+   one file at .agent/local_memory/YYYYMMDD-HHMM_phaseNN_<slug>.md capturing what was built,
+   key decisions, DEVIATIONS from the plan, and test/acceptance status; append a one-line
+   entry to .agent/local_memory/INDEX.md.
+
+Non-negotiable principles:
+3. The acceptance gate defines "done": v1 must reproduce the v0 paper's numbers
+   (albedo sensitivity ~ +61 %/unit R^2~0.87; emissivity ~ -194 %/unit) before new science.
+4. config is the single source of truth. No hardcoded paths or model defaults in code.
+   All parameters resolve through one config loader; validate config loudly at startup.
+5. The canopy model is a PLUGGABLE ENGINE. Li 2023 CEB is the current default behind a
+   CanopyEngine interface; a future swap must be one new file + one config line. The
+   integrator never imports a concrete canopy model.
+6. Preserve the v0 module layering (config -> io -> radiance -> physics -> risk -> viz).
+7. Do not load archive directories wholesale (~1 GB+, mostly data). Use
+   .agent/handoff/04_archive_map.md to open only the file you need.
+8. Do not over-build. Especially the workflow UI: three screens max, reuse existing plots,
+   it rides on the orchestration core. Interface time is not physics time.
+9. Treat outputs/ as generated and git-ignored, never committed.

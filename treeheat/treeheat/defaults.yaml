@@ -1,0 +1,118 @@
+# Default parameter layer. config.yaml overrides these. Nothing here is a path.
+# PORT VALUES FROM: src_archive/config.yaml (physical_constants + model.* blocks).
+
+model:
+  canopy_engine: li2023_ceb
+  ceb:
+    enabled: true
+    A_coeff: 87.0
+    delta_Tg: 10.0
+    delta_Tw: 10.0
+    beta_dir: 0.8
+    beta_dif: 0.6
+    epsilon_w: 0.90
+    epsilon_g_default: 0.95
+    albedo_g_default: 0.30
+    T_min_offset: -15.0
+    T_max_offset: 40.0
+    solver_xtol: 0.1
+    solver_maxiter: 50
+  species_defaults:
+    alpha_leaf: 0.18
+    epsilon_leaf: 0.97
+    gc_max: 0.3
+    vpd_sensitivity: 3.0
+    T_opt: 25.0
+    T_crit: 42.0
+    beta_above: 0.8
+    beta_below: 0.2
+    SVF: 0.6
+    light_extinction_coefficient: 0.5
+    r_sto: 160.0
+    leaf_char_size: 0.05
+    ra_scale: 1.0
+    shelter_factor: 1.0
+  risk:
+    T_crit: 30.0
+  ground:
+    types:
+      impervious:
+        heat_capacity: 2000000.0
+        evap_factor: 0.0
+        k_drain: 0.0
+      pervious:
+        heat_capacity: 1500000.0
+        evap_factor: 0.3
+        k_drain: 0.5
+      vegetated:
+        heat_capacity: 1000000.0
+        evap_factor: 0.8
+        k_drain: 0.2
+    r_a_ground: 50.0
+    ET_pot_ref: 5.0
+  soil:
+    theta_fc: 0.35
+    theta_wilt: 0.15
+    theta_sat: 0.45
+    theta_init: 0.30
+    Z_r: 0.5
+    k_drain_default: 0.2
+    REW_crit: 0.4
+    r_sto_min: 160.0
+
+physical_constants:
+  sigma: 5.67e-8
+  rho_air: 1.2
+  cp_air: 1005.0
+  lambda_v: 2450000.0
+  r_gas: 287.0
+
+analysis:
+  period_type: warmest_week
+  start_date: [7, 15]
+  end_date: [7, 21]
+  hour_range: null
+
+simulation:
+  n_workers: 10
+  sky_resolution: 1
+  surface_key: ""
+  use_accelerad: false
+  baseline_period: annual
+  scenario_period: warmest_week
+  scenario_period_start: null
+  scenario_period_end: null
+  random_seed: 42
+  instructions:
+    - [0.0, 0.0]
+    - [0.25, 0.0]
+    - [0.5, 0.0]
+    - [0.75, 0.0]
+    - [1.0, 0.0]
+    - [0.0, 0.25]
+    - [0.25, 0.25]
+    - [0.5, 0.25]
+    - [0.75, 0.25]
+    - [1.0, 0.25]
+    - [0.0, 0.5]
+    - [0.25, 0.5]
+    - [0.5, 0.5]
+    - [0.75, 0.5]
+    - [1.0, 0.5]
+    - [0.0, 0.75]
+    - [0.25, 0.75]
+    - [0.5, 0.75]
+    - [0.75, 0.75]
+    - [1.0, 0.75]
+    - [0.0, 1.0]
+    - [0.25, 1.0]
+    - [0.5, 1.0]
+    - [0.75, 1.0]
+    - [1.0, 1.0]
+  n_scenarios: 25
+
+outputs:
+  save_scenario_results: true
+  save_risk_analyses: true
+  save_summary: true
+  save_plots: true

@@ -1,9 +1,0 @@
-# Default parameter layer. config.yaml overrides these. Nothing here is a path.
-# PORT VALUES FROM: src_archive/config.yaml (physical_constants + model.* blocks).
-model:
-  canopy_engine: li2023_ceb        # swap engine here, nowhere else
-  ceb: {}                          # TODO: port CEB params (A_coeff, betas, emissivities, solver)
-  species_defaults: {}             # TODO: port leaf optical / stomatal / T_opt defaults
-physical_constants: {}             # TODO: sigma, rho_air, cp_air, lambda_v, r_gas
-analysis:
-  period_type: warmest_week        # annual | warmest_week | manual

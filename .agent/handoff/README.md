@@ -10,11 +10,12 @@ the tree thermal-safety project from the v0 archive (and any human lead reviewin
 | [`03_consolidation_recommendations.md`](03_consolidation_recommendations.md) | How to turn the accreted archive into a tight pipeline. Recommendations with counter-considerations. |
 | [`04_archive_map.md`](04_archive_map.md) | Token-cheap index: file → "look here when…". Read before opening anything in the archives. |
 | [`05_workflow_interface.md`](05_workflow_interface.md) | Design note for the researcher-facing workflow UI: a thin Streamlit skin over an orchestration core, built last. |
-| [`proposed_skeleton/`](proposed_skeleton/) | A clean placeholder repo to build the new pipeline into. Stubs only; pluggable canopy engine; one entry point. |
+| [`../../treeheat/`](../../treeheat/) | The v1 working pipeline (Phases 1–6 complete; acceptance gate passed). Config-driven CLI + orchestration core. |
+| [`proposed_skeleton/`](proposed_skeleton/) | Retired scaffold pointer only — do not build here. |
 
 **One-line orientation:** the science (in `src_archive/METHODOLOGY.md`) and the result
-(in the conference paper) are sound; the job is to rebuild the back-half pipeline
-(Radiance → biophysics → risk) into the skeleton, reproduce the paper's numbers as the
-acceptance gate, then extend toward the missing front end (photogrammetry → Rhino).
+(in the conference paper) are sound; v1 at `treeheat/` reproduces the paper's numbers
+(acceptance gate passed). Remaining work: Stage 2→3 automation spike (Phase 7) and
+researcher-facing UI skin (Phase 8).
 
 The three `*_archive/` folders are reference material — not the working tree.

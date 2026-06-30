@@ -1,0 +1,24 @@
+# Run config — overrides defaults.yaml. Paths are relative to this file (portable).
+# Phase 4: frozen v0 inputs read from src_archive/ (read-only reference).
+
+paths:
+  weather_file: ../../src_archive/weather.epw
+  species_database_file: ../data/tree_species_database.csv
+  material_database_file: ../data/root_material_database.csv
+  grid_records_dir: ../../src_archive/grid_records
+  tree_points_file: ../../src_archive/grid_records/baseline_trees.csv
+  sensor_points_file: ../../src_archive/grid_records/jodla_baseline_grid.csv
+  grid_material_mapping_file: ../../src_archive/grid_records/baseline_materials.csv
+  scenario_grid_materials_file: ../../src_archive/grid_records/scenario_grid_materials.csv
+  baseline_project_dir: ../../src_archive/python/baseline_radiance_project
+  scenario_project_dir: ../../src_archive/python/scenario_radiance_project
+  raytracing_results_dir: ../../src_archive/raytracing_results
+  v0_reference_dir: ../../src_archive/analysis_outputs
+  biophysical_outputs_dir: ../outputs/biophysical
+  analysis_results_dir: ../outputs/analysis
+
+model:
+  canopy_engine: li2023_ceb
+
+analysis:
+  period_type: warmest_week

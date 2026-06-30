@@ -1,7 +1,7 @@
 # Consolidation Recommendations
 
 > **Purpose:** Turn the working-but-accreted `src_archive/` into a tighter, automatable pipeline.
-> **Companion:** the proposed clean structure is scaffolded as placeholders in [`proposed_skeleton/`](proposed_skeleton/).
+> **Companion:** the clean structure is implemented at [`../../treeheat/`](../../treeheat/) (Phases 1–6 complete). The retired scaffold pointer is at [`proposed_skeleton/`](proposed_skeleton/).
 > **Framing:** these are *recommendations to stress-test*, not orders. Each carries a rationale and a counter-consideration so the new team can disagree well.
 
 ---
@@ -79,7 +79,7 @@ The integrator (`biophysical_tree_stress`) calls `engine.solve(...)` and never i
 
 **Problem.** `config.yaml` + `config_locator` enforce "no hardcoded defaults," but the orchestration scripts bypass it with absolute paths and inline constants.
 
-**Recommendation.** In the new skeleton, make `config_locator` (or its successor `config.py`) the **only** path/parameter source, and add a `validate_config()` startup check that fails loudly on missing keys or non-existent paths. Use relative paths resolved against the config-file directory (the archive already does this for the model dirs — extend it everywhere). This is what makes the pipeline portable across machines and agents.
+**Recommendation.** In v1 (`treeheat/config.py`), make the config loader the **only** path/parameter source, and add a `validate_config()` startup check that fails loudly on missing keys or non-existent paths. Use relative paths resolved against the config-file directory (the archive already does this for the model dirs — extend it everywhere). This is what makes the pipeline portable across machines and agents.
 
 **Counter-consideration.** A strict "fail on missing key" policy can be painful during exploration. Provide a documented `defaults.yaml` layer that `config.yaml` overrides, so there *is* one explicit place defaults live — not scattered through code, but not absent either.
 
@@ -95,7 +95,7 @@ The integrator (`biophysical_tree_stress`) calls `engine.solve(...)` and never i
 2. **Move large outputs out of git** entirely — DVC, git-LFS, or an external data store — and keep only a manifest in the repo.
 3. **Regenerate-on-demand:** keep inputs + code, discard derived outputs, document the command to rebuild them.
 
-Whatever you choose, the new skeleton should treat `outputs/` as **generated and git-ignored**, never committed.
+Whatever you choose, v1 treats `outputs/` as **generated and git-ignored**, never committed (implemented in `treeheat/.gitignore`).
 
 **Counter-consideration.** The raytracing outputs are expensive to recompute (annual Radiance runs). Deleting them trades disk for compute. If recompute is slow or the original geometry/grids are fragile to reproduce, lean toward option 2 (move out of git but keep) rather than option 3 (discard).
 
@@ -129,7 +129,7 @@ Whatever you choose, the new skeleton should treat `outputs/` as **generated and
 ## What NOT to change
 
 - **`METHODOLOGY.md`** — inherit as-is; it is the physics spec.
-- **The module layering** (config → IO → radiance → physics → risk → viz). It is already clean; the skeleton preserves it.
+- **The module layering** (config → IO → radiance → physics → risk → viz). It is already clean; v1 preserves it at `treeheat/`.
 - **The databases' schema** (`tree_species_database.csv`, `root_material_database.csv`) — well-designed, citation-backed. Carry forward.
 - **`config.yaml` as single source of truth** — the *principle* is right; just enforce it everywhere.
 
@@ -137,13 +137,15 @@ Whatever you choose, the new skeleton should treat `outputs/` as **generated and
 
 ## Suggested sequencing for the new team
 
-1. Stand up the skeleton + `config.py` + `validate_config()`.
-2. Port the **databases and `METHODOLOGY`** (no logic risk).
-3. Port the **physics modules** behind the engine interface; get CEB passing a single-tree test.
-4. Port **radiance + risk + analysis**; reproduce the paper's headline numbers (albedo slope ≈ 61%/unit, emissivity ≈ −194%/unit) as the **acceptance test**.
-5. Wire the **CLI** + the **orchestration core** (job spec, skip-already-computed, provenance); retire the old scripts.
-6. Make the **data-retention** call (Rec. 5).
+Phases 1–6 are **complete** (see `.agent/local_memory/INDEX.md`). Remaining:
+
+1. ~~Stand up the skeleton + `config.py` + `validate_config()`.~~ **Done (Phase 1).**
+2. ~~Port the **databases and `METHODOLOGY`** (no logic risk).~~ **Done (Phase 2).**
+3. ~~Port the **physics modules** behind the engine interface; get CEB passing a single-tree test.~~ **Done (Phase 3).**
+4. ~~Port **radiance + risk + analysis**; reproduce the paper's headline numbers as the **acceptance test**.~~ **Done (Phase 4 — gate PASS).**
+5. ~~Wire the **CLI** + the **orchestration core**; retire the old scripts.~~ **Done (Phase 5).**
+6. ~~Make the **data-retention** call (Rec. 5).~~ **Done (Phase 6).**
 7. Tackle the Stage 2→3 automation spike (Rec. 6).
 8. *Last:* the researcher-facing **workflow interface** (Rec. 7), as a thin skin over step 5.
 
-Reproducing the paper's numbers (step 4) is the objective definition of "the port worked." Make it the gate before any new science. The workflow interface (step 8) is deliberately last — it has nothing to drive until the pipeline runs.
+Reproducing the paper's numbers (step 4) was the objective definition of "the port worked." The workflow interface (step 8) is deliberately last — it has nothing to drive until the pipeline runs.

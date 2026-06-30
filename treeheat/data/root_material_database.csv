@@ -1,0 +1,16 @@
+material_name,facade_applicable,ground_applicable,naturalness_score,shortwave_albedo,thermal_emissivity,ground_type,heat_capacity_J_m2_K,evap_factor,k_drain,naturalness_score_rationale
+tall_grass,False,True,1.0,0.08,0.97,vegetated,,,,tall grass traps more radation than short grass because of the structure
+short_grass,False,True,0.95,0.17,0.97,vegetated,,,,Living vegetation-high ET
+living_wall,True,False,0.93,0.20,0.97,vegetated,,,,Living vegetation-high ET https://doi.org/10.1016/j.buildenv.2023.110701
+deciduous,False,False,0.9,0.18,0.97,vegetated,,,,Living trees-high ET + shading
+conifer,False,False,0.9,0.15,0.97,vegetated,,,,Living trees-year-round ET
+tan_small_stone_aggregate,False,True,0.7,0.39,0.90,pervious,,,,Natural stone-permeable
+light_grey_unit_pavers,False,True,0.5,0.16,0.90,pervious,,,,Permeable-moderate albedo
+grey_limestone,True,True,0.5,0.51,0.90,pervious,,,,Natural stone-high albedo
+grey_concrete,True,True,0.2,0.35,0.90,impervious,,,,Impervious-processed
+grey_precast_concrete,False,False,0.2,0.35,0.90,impervious,,,,Similar to grey_concrete
+generic,False,False,0.2,0.30,0.95,impervious,,,,Default/conservative
+jar_building_stairs,False,False,0.2,0.20,0.90,impervious,,,,Concrete-like
+black_brick,True,True,0.15,0.05,0.90,impervious,,,,Very low albedo-high heat absorption
+grey_asphalt,False,True,0.1,0.10,0.95,impervious,,,,Impervious-low albedo-worst for heat
+glass,True,False,0.1,0.70,0.84,impervious,,,,Synthetic-high embodied carbon

@@ -14,7 +14,8 @@
 | `analysis_archive/conference_paper.pdf` | The published first-attempt paper (1.3 MB) | You need the scientific framing, results, or claims as written. |
 | `model_archive/` | Stage 2 Rhino/Grasshopper artifacts (131 MB) | You need the 3D geometry, the GH definition, or sky-view-factor inputs. |
 | `src_archive/` | Stages 3–5 code + data (1.4 GB) | Everything about the simulation pipeline. |
-| `.agent/handoff/` | This handoff (docs + `proposed_skeleton/`) | Orientation. Start here, not in the archives. |
+| `.agent/handoff/` | This handoff (orientation docs) | Orientation. Start here, not in the archives. |
+| `treeheat/` | v1 working pipeline (Phases 1–6 complete) | The config-driven CLI, orchestration core, and acceptance-tested pipeline. |
 | `.agent/local_memory/` | Agent working memory | Agent state; not project source. |
 
 ---
